@@ -1,0 +1,98 @@
+:root {
+    --background-color: #1d2b3a;
+    --border-color: aqua;
+    --light-color: #03c8f4;
+    --text-color: #fff;
+    --normal-color: rgba(255, 255, 255, 0.25);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-form {
+    background-color: #1d2b3a;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.form-input {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.form-input label {
+    position: absolute;
+    color: #fff;
+    margin-top: -35px;
+}
+
+.form-input input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--normal-color);
+    background: var(--background-color);
+    outline: none;
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.form-input span {
+    position: absolute;
+    color: var(--normal-color);
+    padding: 6px;
+    left: 0;
+    font-size: 14px;
+    margin-top: 2px;
+    pointer-events: none;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+.form-input input:valid~span,
+.form-input input:focus~span {
+    color: var(--border-color);
+    transform: translateX(6px) translateY(-5px);
+    padding: 0 6px;
+    font-size: 10px;
+    background: var(--background-color);
+    border-left: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+}
+
+.form-input input:valid,
+.form-input input:focus {
+    border: 2px solid var(--border-color);
+    box-shadow:
+        0 0 3px var(--light-color),
+        0 0 6px var(--light-color),
+        0 0 9px var(--light-color);
+}
+
+@media (max-width: 768px) {
+    .box-form .form__header {
+        margin-top: 50%;
+    }
+}
+
+.group__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.group__btn .btn {
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    margin: 0 50px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}

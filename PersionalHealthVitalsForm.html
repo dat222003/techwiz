@@ -18,6 +18,7 @@
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/form.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/header.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/personalHeathVitals.css">
@@ -65,10 +66,14 @@
                 <ul class="navbar-mobile__list">
                   <li class="navbar-mobile__list-item"><a href="index.html" class="navbar-mobile__list-item">Home</a></li>
                   <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Form</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Contact Us</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">About Us</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Feedback</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="user-link"><i class="fas fa-user"></i> Doan
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Contact
+                      Us</a></li>
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">About Us</a>
+                  </li>
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Feedback</a>
+                  </li>
+                  <li class="navbar-mobile__list-item"><a href="" class="user-link"><i class="fas fa-user"></i>
+                      Doan
                       Hoang Anh</a></li>
                 </ul>
               </div>
@@ -83,78 +88,88 @@
     </header>
     <!-- End header -->
 
-    <!-- Form -->
+    <!-- form -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div style="padding: 50px; margin: 100px" class="container">
-            <div class="row">
-              <h1 class="text-center">Personal Health Vitals Form</h1>
-                <br><br>
-                <form class="personal-health__form" action="https://dantri.com.vn/">
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Age</span>
-                    </div>
-                    <input name="age" id="age" type="number" class="form-control" aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default">
+        <div class="col-6 col-lg-6"></div>
+        <div class="box-form col-12 col-lg-6">
+          <h1 class="form__header text-center" style="color: #fff;">Personal Health Vitals</h1>
+          <br><br>
+          <div class="form__main">
+            <form action="https://dantri.com.vn/">
+              <!-- row 1 -->
+              <div class="row">
+                <!-- input name -->
+                <div class="col-12 col-md-6">
+                  <div class="form-input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required="required">
+                    <span>Enter your name</span>
                   </div>
-        
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Height(meter)</span>
-                    </div>
-                    <input name="height" id="height" type="float" class="form-control" aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default">
+                </div>
+                <!-- input age -->
+                <div class="col-12 col-md-6">
+                  <div class="form-input">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" required="required">
+                    <span>Enter your age</span>
                   </div>
-        
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Weight(Kg)</span>
-                    </div>
-                    <input name="weight" id="weight" type="float" class="form-control" aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default">
-                  </div>
-        
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Blood Type</span>
-                    </div>
-                    <input name="bloodtype" id="bloodtype" type="text" class="form-control" aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default">
-                  </div>
-        
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Blood Pressure (mmHg)</span>
-                    </div>
-                    <input name="bloodpressure" id="bloodpressure" type="float" class="form-control" aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default">
-                  </div>
-        
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Blood Sugar (mg/dl)</span>
-                    </div>
-                    <input name="bloodsugar" id="bloodsugar" type="float" class="form-control" aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default">
-                  </div>
-        
-                  <div id="submit" style="width: 100%;
-                   display: flex;
-                   justify-content: end;" class="input-group mb-3 ">
-                    <div class="input-group-prepend ">
-                      <input type="submit" value="Submit">
-                      <input type="reset" value="Reset">
-                    </div>
-                  </div>
-              </form>
-              <div class="col-md-4">
-        
+                </div>
               </div>
-        
-            </div>
+              <!-- row 2 -->
+              <div class="row">
+                <!-- input height -->
+                <div class="col-12 col-md-6">
+                  <div class="form-input">
+                    <label for="height">Height (Cm)</label>
+                    <input type="text" id="height" required="required">
+                    <span>Enter your height</span>
+                  </div>
+                </div>
+                <!-- input weight -->
+                <div class="col-12 col-md-6">
+                  <div class="form-input">
+                    <label for="weight">Weight (Kg)</label>
+                    <input type="text" id="weight" required="required">
+                    <span>Enter your weight</span>
+                  </div>
+                </div>
+              </div>
+              <!-- row 3 -->
+              <div class="row">
+                <!-- input blood type -->
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
+                  <div class="form-input">
+                    <label for="bloodt">Blood Type</label>
+                    <input type="text" id="bloodt" required="required">
+                    <span>your blood type</span>
+                  </div>
+                </div>
+                <!-- input blood pressure -->
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
+                  <div class="form-input">
+                    <label for="bloodp">Blood Pressure (mmHg)</label>
+                    <input type="text" id="bloodp" required="required">
+                    <span>your blood Pressure</span>
+                  </div>
+                </div>
+                <!-- input blood sugar -->
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
+                  <div class="form-input">
+                    <label for="bloods">Blood Sugar (mg/dl)</label>
+                    <input type="text" id="bloods" required="required">
+                    <span>your blood Sugar</span>
+                  </div>
+                </div>
+              </div>
+              <!-- btn -->
+              <div class="group__btn">
+                <input class="btn" type="reset" value="Reset">
+                <input class="btn" type="submit" value="Submit">
+              </div>
+
           </div>
+          </form>
         </div>
       </div>
     </div>
