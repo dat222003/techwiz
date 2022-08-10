@@ -44,6 +44,7 @@ async function CheckIfUserExist() {
     }
   }
   document.getElementById("username").innerText = "  " + user_input
+  
   document.getElementById("username_resp").innerText = "  " + user_input
   document.querySelector(".get-username").style.display = "none";
 }
@@ -67,6 +68,19 @@ $("input").on("keydown", function search(e) {
     CheckIfUserExist();
   }
 });
+
+//Odometer about us
+setTimeout(function () {
+  odometer1.innerHTML = 2500;
+}, 100);
+
+setTimeout(function () {
+  odometer2.innerHTML = 500;
+}, 100);
+
+setTimeout(function () {
+  odometer3.innerHTML = 7500;
+}, 100);
 
 
 

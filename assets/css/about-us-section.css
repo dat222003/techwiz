@@ -1,0 +1,61 @@
+.about-us__img img{
+    width: 100%;
+}
+
+.about-us__heading,
+.about-us__title,
+.about-us__sub-title{
+    margin-bottom: 40px;
+}
+
+.about-us__heading{
+    font-size: 4rem;
+    position: relative;
+}
+
+.about-us__heading::after{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--blue-general);
+    margin-bottom: -5px;
+}
+
+.about-us__title{
+    font-size: 2rem ;
+}
+
+.about-us__sub-title{
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.about-us__slick-slider{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.slick-slider__box{
+    font-size: 1.6rem;
+}
+
+.about-us__slick-slider-icon{
+    padding: 16px 20px;
+    border: 2px solid var(--blue-general);
+    color: var(--blue-general);
+    font-size: 3rem;
+}
+
+.slick-slider__box-odometer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.odometer-text{
+    font-size: 1.8rem;
+}
