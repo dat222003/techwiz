@@ -20,7 +20,7 @@ async function CheckIfUserExist() {
 let mobileNavBtn = document.querySelector(".navbar-mobile_btn");
 let mobileNavList = document.querySelector(".navbar-mobile__list");
 mobileNavBtn.onclick = function(){
-  mobileNavList.classList.toggle("open");
+  mobileNavList.classList.toggle("open"); 
 }
 
 
