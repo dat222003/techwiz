@@ -14,3 +14,11 @@ html{
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+
+:root{
+    --black-general: #0E1400;
+    --white-general: #fff;
+    --text-color: #757575;
+    --light-blue-general: #48dbfb;
+    --blue-general: #0abde3;
+}

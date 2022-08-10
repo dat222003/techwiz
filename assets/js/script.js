@@ -1,4 +1,3 @@
-
 async function CheckIfUserExist() {
   const respon = await fetch("data.json"),
    data = await respon.json(),
@@ -13,6 +12,12 @@ async function CheckIfUserExist() {
 
 }
 
+// Open mobile navbar list
+let mobileNavBtn = document.querySelector(".navbar-mobile_btn");
+let mobileNavList = document.querySelector(".navbar-mobile__list");
+mobileNavBtn.onclick = function(){
+  mobileNavList.classList.toggle("open");
+}
 
 
 
