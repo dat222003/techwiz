@@ -10,17 +10,84 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap"
     rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon1.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css" rel="stylesheet">
   <link rel="stylesheet"
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
 </head>
 
 <body>
-  <div class="container">
+  <main role="main" id="main">
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-6 col-lg-2">
+                    <a class="header__logo-link" href="index.html">
+                        <img src="./assets/img/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-10">
+                    <nav class="navbar">
+                        <ul class="navbar-list">
+                            <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Home</a></li>
+                            <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Form</a></li>
+                            <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Contact Us</a>
+                            </li>
+                            <li class="navbar-list__item"><a href="" class="navbar-list__item-link">About Us</a>
+                            </li>
+                            <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Feedback</a>
+                            </li>
+                            <li class="navbar-list__item search-btn"><a href="" class="navbar-list__item-link"><i
+                                        class="fas fa-search"></i></a></li>
+                        </ul>
+
+                        <div id="navbar-mobile" class="navbar-mobile">
+                            <div class="navbar-mobile__icon">
+                                <div class="mobile-search search-btn">
+                                    <i class="fas fa-search"></i>
+                                </div>
+
+                                <button class="navbar-mobile_btn">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
+
+                            <ul class="navbar-mobile__list">
+                                <li class="navbar-mobile__list-item"><a href=""
+                                        class="navbar-mobile__list-item">Home</a></li>
+                                <li class="navbar-mobile__list-item"><a href=""
+                                        class="navbar-mobile__list-item">Form</a></li>
+                                <li class="navbar-mobile__list-item"><a href=""
+                                        class="navbar-mobile__list-item">Contact Us</a></li>
+                                <li class="navbar-mobile__list-item"><a href=""
+                                        class="navbar-mobile__list-item">About Us</a></li>
+                                <li class="navbar-mobile__list-item"><a href=""
+                                        class="navbar-mobile__list-item">Feedback</a></li>
+                                <li class="navbar-mobile__list-item"><a href="" class="user-link"><i
+                                            class="fas fa-user"></i> Doan Hoang Anh</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="user">
+                            <a href="" class="user-link"><i class="fas fa-user"></i> Doan Hoang Anh</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+</main>
+  <div style="padding: 50px; margin: 100px" class="container">
 
 
 
@@ -33,48 +100,56 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Age</span>
             </div>
-            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input name="age" id="age" type="number" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Height(meter)</span>
             </div>
-            <input type="float" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input name="height" id="height" type="float" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Weight(Kg)</span>
             </div>
-            <input type="float" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input name="weight" id="weight" type="float" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Blood Type</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input name="bloodtype" id="bloodtype" type="text" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Blood Pressure (mmHg)</span>
             </div>
-            <input type="float" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input name="bloodpressure" id="bloodpressure" type="float" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Blood Sugar (mg/dl)</span>
             </div>
-            <input type="float" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input name="bloodsugar" id="bloodsugar" type="float" class="form-control" aria-label="Default"
+              aria-describedby="inputGroup-sizing-default">
           </div>
 
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <input type="reset" value="Reset">
+          <div id="submit" style="width: 100%;
+           display: flex;
+           justify-content: end;" class="input-group mb-3 ">
+            <div class="input-group-prepend ">
               <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
             </div>
           </div>
 
