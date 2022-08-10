@@ -32,8 +32,8 @@ async function CheckIfUserExist() {
   for (let index = 0; index < user.length; index++) {
     var element = user[index];
     if (Object.values(element).indexOf(user_input) > -1) {
-      document.getElementById("username").innerText = "  " +  element
-      document.getElementById("username_resp").innerText = "  " +  element
+      document.getElementById("username").innerText = "  " +  element.name
+      document.getElementById("username_resp").innerText = "  " +  element.name
       document.querySelector(".get-username").style.display = "none";
       return
     }
