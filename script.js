@@ -42,6 +42,12 @@ mobileNavBtn.onclick = function(){
   mobileNavList.classList.toggle("open");
 }
 
+// Close get username
+let closeBtn = document.querySelector(".close-username__btn");
+closeBtn.onclick = function(){
+  document.querySelector(".get-username").style.display = "none";
+}
+
 
 
 

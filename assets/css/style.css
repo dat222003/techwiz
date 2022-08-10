@@ -21,4 +21,5 @@ body{
     --text-color: #757575;
     --light-blue-general: #48dbfb;
     --blue-general: #0abde3;
+    --background-color-shadow: rgba(0, 0, 0, 0.7);
 }

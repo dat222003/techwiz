@@ -1,0 +1,43 @@
+.get-username{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: var(--background-color-shadow);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.get-username__content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-username__heading{
+    color: var(--white-general);
+}
+
+.username-input{
+    width: 30%;
+    height: 45px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.close-username__btn{
+    position: absolute;
+    top: -50px;
+    right: 30%;
+    font-size: 3rem;
+    border: none;
+    background-color: transparent;
+    color: var(--white-general);
+}
