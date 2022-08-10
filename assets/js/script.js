@@ -1,15 +1,19 @@
 async function CheckIfUserExist() {
-  const respon = await fetch("data.json"),
+  const respon = await fetch("data/data.json"),
    data = await respon.json(),
    user = data.users.user
-   console.log(user[0])
   const user_input =  document.getElementById("name").value
   if (user_input == "") alert("name must be filled")
-  if (Object.values(user).indexOf(user_input) > -1) {
-    console.log('user existed');
-    return
-  }console.log("user not existed")
-
+  for (let index = 0; index < user.length; index++) {
+    const element = user[index];
+    if (Object.values(element).indexOf(user_input) > -1) {
+          console.log("existed")
+          return true
+        }
+  }
+  console.log("not exist")
+  return false
+  
 }
 
 // Open mobile navbar list
@@ -18,6 +22,11 @@ let mobileNavList = document.querySelector(".navbar-mobile__list");
 mobileNavBtn.onclick = function(){
   mobileNavList.classList.toggle("open");
 }
+
+
+
+
+
 
 
 
