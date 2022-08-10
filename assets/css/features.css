@@ -1,0 +1,26 @@
+.features-section{
+    padding-top: 100px;
+}
+
+.features__item{
+    text-align: center;
+}
+
+.features__item img{
+    width: 100%;
+}
+
+.features__item-btn{
+    border: 1px solid var(--blue-general);
+    background-color: var(--white-general);
+    color: #0987a3;
+    padding: 10px;
+    font-size: 1.6rem;
+    margin-top: -21px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.features__item-btn:hover{
+    color: #0987a3;
+}
