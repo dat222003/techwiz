@@ -1,0 +1,28 @@
+.carousel {
+    margin-top: 100px;
+    margin-bottom: 4rem;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    font-size: 2rem;
+}
+
+.carousel-item {
+    height: 60rem;
+    max-width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.welcome-carousel-image1{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../img/carousel.jpg');
+}
+
+.welcome-carousel-image2{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../img/carousel2.jpg');
+}
