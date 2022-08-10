@@ -57,9 +57,9 @@ closeBtn.onclick = function () {
 }
 
 // Get username value
-$("input").on("keydown", function search(e) {
-  if (e.keyCode == 13) {
-    CheckIfUserExist()
+$("input").on("keydown",function search(e) {
+  if(e.keyCode == 13) {
+    CheckIfUserExist();
   }
 });
 
