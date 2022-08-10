@@ -48,6 +48,13 @@ closeBtn.onclick = function(){
   document.querySelector(".get-username").style.display = "none";
 }
 
+// Get username value
+$("input").on("keydown",function search(e) {
+  if(e.keyCode == 13) {
+      alert($(this).val());
+  }
+});
+
 
 
 
