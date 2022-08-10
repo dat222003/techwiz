@@ -1,0 +1,37 @@
+/* Big Screen */
+@media (min-width: 1920px){
+
+}
+
+/* PC */
+@media (min-width: 1024px){
+    .navbar-mobile {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px){
+
+}
+
+/* Small Tablet */
+@media(max-width: 912px){
+    .header__logo-link img{
+        width: 80%;
+    }
+    
+    .user,
+    .navbar-list{
+        display: none;
+    }
+
+    .navbar-mobile {
+        margin-left: auto;
+    }
+}
+
+/* Mobile */
+@media(max-width: 782px){
+
+}

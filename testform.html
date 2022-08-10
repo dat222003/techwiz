@@ -23,13 +23,15 @@
 
 <body>
 
-  <form action="#" name="user_name"> 
+  <form action="#" name="user_name" id="form"> 
     <input class="" type="text" id="name" name="name" value="" placeholder="name">
-    <input value="Check" type="button" onclick="CheckIfUserExist()" class="btn btn-primary">
+    <input value="Check" onclick="GetData()" class="btn btn-primary">
   </form>
 
+  <p id="output"></p>
+
   
-    <script type="text/javascript" src="js/script.js" ></script>
+    <script type="text/javascript" src="script.js" ></script>
     <script src="https://kit.fontawesome.com/3c8421013d.js" crossorigin="anonymous"></script>
     <script src="https://github.hubspot.com/odometer/odometer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
