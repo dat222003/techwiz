@@ -1,0 +1,121 @@
+.feedback-section{
+    position: relative;
+    background-image: url(../img/feedback-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 64px 0;
+}
+
+.feedback-section__content{
+    background-color: var(--background-color-shadow);
+    width: 100%;
+    padding: 64px 0;
+}
+
+.feedback-section__content-heading{
+    text-align: center;
+}
+
+.sub-title,
+.main-title{
+    color: var(--white-general);
+}
+
+.feedback__slider-item {
+    margin: 0 10px;
+}
+
+.feedback-card {
+    background-color: var(--white-general);
+    padding: 60px 40px;
+    margin: 30px 0;
+    border-left: 5px solid var(--blue-general);
+    border-radius: 5px;
+    height: 300px;
+    position: relative;
+}
+
+.feedback-card__head {
+    display: flex;
+    gap: 2rem;
+}
+
+.feedback-card__head-avatar {
+    width: 70px;
+    height: 70px;
+}
+
+.feedback-card__head-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback-card__head-name {
+    align-self: center;
+    color: var(--black-general);
+}
+
+.comment,
+.feedback-card__head-name span {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.comment {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.slick-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.slick-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.slick-arrow {
+    font-size: 2rem;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--blue-general);
+    opacity: 0.6;
+}
+
+.slick-arrow:hover {
+    opacity: 1;
+    transition: all 0.15s;
+}
+
+.feedback-card .feedback-card__footer {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: var(--blue-general);
+    background-color: var(--white-general);
+}

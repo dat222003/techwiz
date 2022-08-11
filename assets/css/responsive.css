@@ -29,6 +29,10 @@
     .navbar-mobile {
         margin-left: auto;
     }
+
+    .self-health-tips__header .sub-title{
+        max-width: 100%;
+    }
 }
 
 /* Mobile */
