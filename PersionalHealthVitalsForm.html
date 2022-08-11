@@ -21,38 +21,63 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/header.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/get-username.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/personalHeathVitals.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/personalHeathVitals.css">
 </head>
 
 <body>
   <main role="main" id="main">
-
     <!-- Header -->
     <header id="header">
       <div class="container">
         <div class="row g-0 align-items-center">
+          <!-- logo -->
           <div class="col-6 col-lg-2">
             <a class="header__logo-link" href="index.html">
               <img src="./assets/img/logo.png" alt="logo">
             </a>
           </div>
+          <!-- end logo -->
 
+          <!-- content -->
           <div class="col-6 col-lg-10">
             <nav class="navbar">
+              <!-- navbar pc -->
               <ul class="navbar-list">
-                <li class="navbar-list__item"><a href="index.html" class="navbar-list__item-link">Home</a></li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Form</a></li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Contact Us</a>
+                <li class="navbar-list__item">
+                  <a class="navbar-list__item-link" href="index.html">
+                    Home
+                  </a>
                 </li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">About Us</a>
+                <li class="navbar-list__item">
+                  <a class="navbar-list__item-link" href="">
+                    Form
+                  </a>
                 </li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Feedback</a>
+                <li class="navbar-list__item">
+                  <a class="navbar-list__item-link" href="">
+                    Contact Us
+                  </a>
                 </li>
-                <li class="navbar-list__item search-btn"><a href="" class="navbar-list__item-link"><i
-                      class="fas fa-search"></i></a></li>
+                <li class="navbar-list__item">
+                  <a class="navbar-list__item-link" href="">
+                    About Us
+                  </a>
+                </li>
+                <li class="navbar-list__item">
+                  <a class="navbar-list__item-link" href="">
+                    Feedback
+                  </a>
+                </li>
+                <li class="navbar-list__item search-btn">
+                  <a class="navbar-list__item-link" href="">
+                    <i class="fas fa-search"></i>
+                  </a>
+                </li>
               </ul>
+              <!-- end nav pc -->
 
+              <!-- navbar mobile -->
               <div id="navbar-mobile" class="navbar-mobile">
                 <div class="navbar-mobile__icon">
                   <div class="mobile-search search-btn">
@@ -65,22 +90,50 @@
                 </div>
 
                 <ul class="navbar-mobile__list">
-                  <li class="navbar-mobile__list-item"><a href="index.html" class="navbar-mobile__list-item">Home</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Form</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Contact
-                      Us</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">About Us</a>
+                  <li class="navbar-mobile__list-item">
+                    <a class="navbar-mobile__list-item" href="index.html">
+                      Home
+                    </a>
                   </li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Feedback</a>
+                  <li class="navbar-mobile__list-item">
+                    <a class="navbar-mobile__list-item" href="">
+                      Form
+                    </a>
                   </li>
-                  <li class="navbar-mobile__list-item"><a href="" class="user-link"><i
-                    class="fas fa-user" id="username_resp"></i></a></li>
+                  <li class="navbar-mobile__list-item">
+                    <a class="navbar-mobile__list-item" href="">
+                      Contact Us
+                    </a>
+                  </li>
+                  <li class="navbar-mobile__list-item">
+                    <a class="navbar-mobile__list-item" href="">
+                      About Us
+                    </a>
+                  </li>
+                  <li class="navbar-mobile__list-item">
+                    <a class="navbar-mobile__list-item" href="">
+                      Feedback
+                    </a>
+                  </li>
+                  <li class="navbar-mobile__list-item">
+                    <a class="user-link" href="">
+                      <i class="fas fa-user" id="username_resp"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
+              <!-- end nav mobile -->
 
+              <!-- user info -->
               <div class="user">
-                <a href="" class="user-link"><i class="fas fa-user" id="username">
-                  
+                <a class="user-link" href="">
+                  <i class="fas fa-user" id="username"></i>
+                </a>
+              </div>
+              <!-- end user info -->
+            </nav>
+          </div>
+          <!-- end content -->
         </div>
       </div>
     </header>
@@ -91,12 +144,12 @@
       <div class="row">
         <!-- img -->
         <div class="form__img col-6 col-lg-6">
-
+          <!-- <img class="img2" src="assets/img/health-care-vitals2.jpg" alt="" srcset=""> -->
+          <img class="img1" src="assets/img/health-care-vitals.jpg" alt="" srcset="">
         </div>
         <!-- form -->
         <div class="box-form col-12 col-lg-6">
           <h1 class="form__header text-center" style="color: #fff;">Personal Health Vitals</h1>
-          <br><br>
           <div class="form__main" onload="setUserData()">
             <form action="https://dantri.com.vn/">
               <!-- row 1 -->
@@ -104,8 +157,8 @@
                 <!-- input name -->
                 <div class="col-12 col-md-6">
                   <div class="form-input">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required="required">
+                    <label for="form_name">Name</label>
+                    <input type="text" id="form_name" required="required">
                     <span>Enter your name</span>
                   </div>
                 </div>
@@ -164,10 +217,11 @@
                   </div>
                 </div>
               </div>
+              <!-- row 4 -->
               <!-- btn -->
               <div class="group__btn">
-                <button class="form__butn" id="btn__reset" onclick="form_btn_active()" type="reset">Reset</button>
-                <button class="form__butn" id="btn__submit" onclick="form_btn_active()" type="submit">Submit</button>
+                <button class="form__butn" id="btn__reset" onclick="btn_reset_active()" type="reset">Reset</button>
+                <button class="form__butn" id="btn__submit" onclick="btn_submit_active()" type="submit">Submit</button>
               </div>
           </div>
           </form>
@@ -177,6 +231,7 @@
     </div>
     <!-- end content -->
   </main>
+
   <div class="get-username" style="display: none;">
     <div class="container">
       <div class="row">
@@ -191,20 +246,6 @@
     </div>
   </div>
 
-  <div class="get-username">
-    <div class="container">
-        <div class="row">
-            <div class="get-username__content">
-                <h1 class="get-username__heading">Can we get your name, please?</h1>
-                <input class="username-input" id="username-input" type="text" placeholder="Your name...">
-                <button class="close-username__btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
   <script src="https://kit.fontawesome.com/3c8421013d.js" crossorigin="anonymous"></script>
   <script src="https://github.hubspot.com/odometer/odometer.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -213,9 +254,23 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
   <script src="script.js"></script>
-
+  <script>
+    var btn_submit = document.getElementById("btn__submit");
+    var btn_reset = document.getElementById("btn__reset");
+    function btn_reset_active() {
+      btn_reset.classList.toggle("active");
+      if (btn_reset.className == "form__butn active") {
+        const off_reset_active = setTimeout(btn_reset_active, 5000);
+      }
+    }
+    function btn_submit_active() {
+      btn_submit.classList.toggle("active");
+      if (btn_submit.className == "form__butn active") {
+        const off_submit_active = setTimeout(btn_submit_active, 5000);
+      }
+    }
+  </script>
 </body>
 
-</html>
+</html>F
