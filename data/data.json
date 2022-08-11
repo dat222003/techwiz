@@ -2,10 +2,10 @@
   "users" : {
       "user" : [{
         "name" : "name",
-        "age" : "45", 
+        "age" : "45",
         "height" : "123",
         "weight" : "65",
-        "bloodtype" : "AB", 
+        "bloodtype" : "AB",
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
       },{

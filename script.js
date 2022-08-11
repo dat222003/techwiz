@@ -1,22 +1,27 @@
-// async function CheckIfUserExist() {
-//   var respon = await fetch("data/data.json"),
-//    data = await respon.json(),
-//    user = data.users.user
-//   var user_input =  document.getElementById("name").value
-//   if (user_input == "") alert("name must be filled")
-//   for (let index = 0; index < user.length; index++) {
-//     var element = user[index];
-//     if (Object.values(element).indexOf(user_input) > -1) {
-//           console.log("existed")
-//           return true
-//     }
-//   }
-//   console.log("not exist")
-//   return false
 
-// }
+function setCookie(key, value, days_till_expire) {
+  const d = new Date();
+  d.setTime(d.getTime() + (days_till_expire * 24 * 60 * 60 * 1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = key + "=" + value + ";" + expires + ";path=/";
+}
 
-var user
+function getCookie(p) {
+  let name = p + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let arr = decodedCookie.split(';');
+  for (let i = 0; i < arr.length; i++) {
+    let component = arr[i];
+    while (component.charAt(0) == ' ') {
+      component = component.substring(1);
+    }
+    if (component.indexOf(name) == 0) {
+      return component.substring(name.length, component.length);
+    }
+  }
+  return "";
+}
+
 
 async function GetData() {
   let respon = await fetch("data/data.json")
@@ -25,29 +30,36 @@ async function GetData() {
 }
 
 async function CheckIfUserExist() {
-  var json_data = await GetData()
-  user = json_data.users.user
-  var user_input = document.getElementById("username-input").value
+  //if user existed load user's datas to cookie
+  var json_data = await GetData();
+  var user = json_data.users.user;
+  var user_input = document.getElementById("username-input").value;
   if (user_input == "") {
-    document.getElementById("username").innerText = "   unknown"
-    document.getElementById("username_resp").innerText = "   unknown"
+    document.getElementById("username").innerText = "Welcome   unknown";
+    document.getElementById("username_resp").innerText = "Welcome   unknown";
     document.querySelector(".get-username").style.display = "none";
-    return
+    return;
   }
-  for (let index = 0; index < user.length; index++) {
-    var element = user[index];
+  for (let i = 0; i < user.length; i++) {
+    var element = user[i];
+    const keys = Object.keys(element),
+      values = Object.values(element),
+      numOfKeys = Object.keys(keys).length;
     if (Object.values(element).indexOf(user_input) > -1) {
-      document.getElementById("username").innerText = "  " + element.name
-      document.getElementById("username_resp").innerText = "  " + element.name
+      for (let j = 0; j < numOfKeys; j++) {
+        setCookie(keys[j], values[j], 1); //expire in 1 day
+      }
+      setUserData();
       document.querySelector(".get-username").style.display = "none";
-      return
+      return;
     }
+    setCookie("name", user_input, 1)
+    setUserData();
   }
-  document.getElementById("username").innerText = "  " + user_input
-  document.getElementById("username_resp").innerText = "  " + user_input
   document.querySelector(".get-username").style.display = "none";
 }
 
+<<<<<<< HEAD
 // Close get username
 let closeBtn = document.querySelector(".close-username__btn");
 closeBtn.onclick = function () {
@@ -55,6 +67,52 @@ closeBtn.onclick = function () {
 }
 
 // // Open mobile navbar list
+=======
+function setUserData() {
+  if (document.getElementById("name")) {
+    document.getElementById("name").value = "Welcome  " + getCookie("name");
+  }
+  if (document.getElementById("username")) {
+    document.getElementById("username").innerText = "Welcome  " + getCookie("name");
+  }
+  if (document.getElementById("username_resp")) {
+    document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
+  }
+  if (document.getElementById("height")) {
+    document.getElementById("height").value = getCookie("height");
+  }
+  if (document.getElementById("weight")) {
+    document.getElementById("weight").value = getCookie("weight");
+  }
+  if (document.getElementById("bloodtype")) {
+    document.getElementById("bloodtype").value = getCookie("bloodtype");
+  }
+  if (document.getElementById("bloodpressure")) {
+    document.getElementById("bloodpressure").value = getCookie("bloodpressure");
+  }
+  if (document.getElementById("bloodsugar")) {
+    document.getElementById("bloodsugar").value = getCookie("bloodsugar");
+  }
+  if (document.getElementById("age")) {
+    document.getElementById("age").value = getCookie("age");
+  }
+
+}
+
+window.onload = function () {
+  if (document.cookie != "") {
+    document.querySelector(".get-username").style.display = "none";
+    setUserData();
+    console.log(document.cookie)
+    return
+  }
+  document.querySelector(".get-username").style.display = "flex";
+}
+
+
+
+// Open mobile navbar list
+>>>>>>> df128072de73e1fc30f1d1133c9cccc75734802e
 let mobileNavBtn = document.querySelector(".navbar-mobile_btn");
 let mobileNavList = document.querySelector(".navbar-mobile__list");
 mobileNavBtn.onclick = function () {
@@ -67,6 +125,19 @@ $("input").on("keydown", function search(e) {
     CheckIfUserExist();
   }
 });
+
+//Odometer about us
+// setTimeout(function () {
+//   odometer1.innerHTML = 2500;
+// }, 100);
+
+// setTimeout(function () {
+//   odometer2.innerHTML = 500;
+// }, 100);
+
+// setTimeout(function () {
+//   odometer3.innerHTML = 7500;
+// }, 100);
 
 
 

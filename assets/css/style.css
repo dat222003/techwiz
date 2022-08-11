@@ -23,3 +23,7 @@ body{
     --blue-general: #0abde3;
     --background-color-shadow: rgba(0, 0, 0, 0.7);
 }
+
+.section{
+    padding: 64px 0;
+}

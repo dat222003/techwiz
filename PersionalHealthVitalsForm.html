@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/get-username.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/personalHeathVitals.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
 </head>
@@ -28,7 +29,67 @@
   <main role="main" id="main">
 
     <!-- Header -->
+<<<<<<< HEAD
     <header id="header"></header>
+=======
+    <header id="header">
+      <div class="container">
+        <div class="row g-0 align-items-center">
+          <div class="col-6 col-lg-2">
+            <a class="header__logo-link" href="index.html">
+              <img src="./assets/img/logo.png" alt="logo">
+            </a>
+          </div>
+
+          <div class="col-6 col-lg-10">
+            <nav class="navbar">
+              <ul class="navbar-list">
+                <li class="navbar-list__item"><a href="index.html" class="navbar-list__item-link">Home</a></li>
+                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Form</a></li>
+                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Contact Us</a>
+                </li>
+                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">About Us</a>
+                </li>
+                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Feedback</a>
+                </li>
+                <li class="navbar-list__item search-btn"><a href="" class="navbar-list__item-link"><i
+                      class="fas fa-search"></i></a></li>
+              </ul>
+
+              <div id="navbar-mobile" class="navbar-mobile">
+                <div class="navbar-mobile__icon">
+                  <div class="mobile-search search-btn">
+                    <i class="fas fa-search"></i>
+                  </div>
+
+                  <button class="navbar-mobile_btn">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                </div>
+
+                <ul class="navbar-mobile__list">
+                  <li class="navbar-mobile__list-item"><a href="index.html" class="navbar-mobile__list-item">Home</a></li>
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Form</a></li>
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Contact
+                      Us</a></li>
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">About Us</a>
+                  </li>
+                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Feedback</a>
+                  </li>
+                  <li class="navbar-mobile__list-item"><a href="" class="user-link"><i
+                    class="fas fa-user" id="username_resp"></i></a></li>
+                </ul>
+              </div>
+
+              <div class="user">
+                <a href="" class="user-link"><i class="fas fa-user" id="username"></i></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+>>>>>>> df128072de73e1fc30f1d1133c9cccc75734802e
     <!-- End header -->
 
     <!-- content -->
@@ -41,7 +102,12 @@
         <!-- form -->
         <div class="box-form col-12 col-lg-6">
           <h1 class="form__header text-center" style="color: #fff;">Personal Health Vitals</h1>
+<<<<<<< HEAD
           <div class="form__main">
+=======
+          <br><br>
+          <div class="form__main" onload="setUserData()">
+>>>>>>> df128072de73e1fc30f1d1133c9cccc75734802e
             <form action="https://dantri.com.vn/">
               <!-- row 1 -->
               <div class="row">
@@ -87,7 +153,7 @@
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
                   <div class="form-input">
                     <label for="bloodt">Blood Type</label>
-                    <input type="text" id="bloodt" required="required">
+                    <input type="text" id="bloodtype" required="required">
                     <span>your blood type</span>
                   </div>
                 </div>
@@ -95,7 +161,7 @@
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
                   <div class="form-input">
                     <label for="bloodp">Blood Pressure (mmHg)</label>
-                    <input type="text" id="bloodp" required="required">
+                    <input type="text" id="bloodpressure" required="required">
                     <span>your blood Pressure</span>
                   </div>
                 </div>
@@ -103,7 +169,7 @@
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
                   <div class="form-input">
                     <label for="bloods">Blood Sugar (mg/dl)</label>
-                    <input type="text" id="bloods" required="required">
+                    <input type="text" id="bloodsugar" required="required">
                     <span>your blood Sugar</span>
                   </div>
                 </div>
@@ -122,6 +188,7 @@
     <!-- end content -->
   </main>
 
+<<<<<<< HEAD
   <div class="get-username" style="display: none;">
     <div class="container">
       <div class="row">
@@ -135,6 +202,21 @@
       </div>
     </div>
   </div>
+=======
+  <div class="get-username">
+    <div class="container">
+        <div class="row">
+            <div class="get-username__content">
+                <h1 class="get-username__heading">Can we get your name, please?</h1>
+                <input class="username-input" id="username-input" type="text" placeholder="Your name...">
+                <button class="close-username__btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> df128072de73e1fc30f1d1133c9cccc75734802e
 
   <script src="https://kit.fontawesome.com/3c8421013d.js" crossorigin="anonymous"></script>
   <script src="https://github.hubspot.com/odometer/odometer.js"></script>
