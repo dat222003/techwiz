@@ -70,22 +70,22 @@ function setUserData() {
     document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
   }
   if (document.getElementById("height")) {
-    document.getElementById("height").innerText = "Welcome  " + getCookie("height");
+    document.getElementById("height").value = getCookie("height");
   }
   if (document.getElementById("weight")) {
-    document.getElementById("weight").innerText = "Welcome  " + getCookie("weight");
+    document.getElementById("weight").value = getCookie("weight");
   }
   if (document.getElementById("bloodtype")) {
-    document.getElementById("bloodtype").innerText = "Welcome  " + getCookie("bloodtype");
+    document.getElementById("bloodtype").value = getCookie("bloodtype");
   }
   if (document.getElementById("bloodpressure")) {
-    document.getElementById("bloodpressure").innerText = "Welcome  " + getCookie("bloodpressure");
+    document.getElementById("bloodpressure").value = getCookie("bloodpressure");
   }
   if (document.getElementById("bloodsugar")) {
-    document.getElementById("bloodsugar").innerText = "Welcome  " + getCookie("bloodsugar");
+    document.getElementById("bloodsugar").value = getCookie("bloodsugar");
   }
   if (document.getElementById("age")) {
-    document.getElementById("age").innerText = "Welcome  " + getCookie("age");
+    document.getElementById("age").value = getCookie("age");
   }
 
 }
