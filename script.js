@@ -48,17 +48,17 @@ async function CheckIfUserExist() {
   document.querySelector(".get-username").style.display = "none";
 }
 
+// Close get username
+let closeBtn = document.querySelector(".close-username__btn");
+closeBtn.onclick = function () {
+  document.querySelector(".get-username").style.display = "none";
+}
+
 // // Open mobile navbar list
 let mobileNavBtn = document.querySelector(".navbar-mobile_btn");
 let mobileNavList = document.querySelector(".navbar-mobile__list");
 mobileNavBtn.onclick = function () {
   mobileNavList.classList.toggle("open");
-}
-
-// Close get username
-let closeBtn = document.querySelector(".close-username__btn");
-closeBtn.onclick = function () {
-  document.querySelector(".get-username").style.display = "none";
 }
 
 // Get username value
@@ -70,7 +70,18 @@ $("input").on("keydown", function search(e) {
 
 
 
+function form_btn_active() {
+  var btn_reset = document.getElementById("btn__reset");
+  var btn_submit = document.getElementById("btn__submit");
 
+  if (btn_reset.className = "form__butn active") {
+
+  }
+  btn_reset.classList.toggle("active");
+  btn_submit.classList.toggle("active");
+
+  console.log(btn_reset.className);
+}
 
 
 

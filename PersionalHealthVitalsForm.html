@@ -26,76 +26,21 @@
 
 <body>
   <main role="main" id="main">
+
     <!-- Header -->
-    <header id="header">
-      <div class="container">
-        <div class="row g-0 align-items-center">
-          <div class="col-6 col-lg-2">
-            <a class="header__logo-link" href="index.html">
-              <img src="./assets/img/logo.png" alt="logo">
-            </a>
-          </div>
-
-          <div class="col-6 col-lg-10">
-            <nav class="navbar">
-              <ul class="navbar-list">
-                <li class="navbar-list__item"><a href="index.html" class="navbar-list__item-link">Home</a></li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Form</a></li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Contact Us</a>
-                </li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">About Us</a>
-                </li>
-                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Feedback</a>
-                </li>
-                <li class="navbar-list__item search-btn"><a href="" class="navbar-list__item-link"><i
-                      class="fas fa-search"></i></a></li>
-              </ul>
-
-              <div id="navbar-mobile" class="navbar-mobile">
-                <div class="navbar-mobile__icon">
-                  <div class="mobile-search search-btn">
-                    <i class="fas fa-search"></i>
-                  </div>
-
-                  <button class="navbar-mobile_btn">
-                    <i class="fas fa-bars"></i>
-                  </button>
-                </div>
-
-                <ul class="navbar-mobile__list">
-                  <li class="navbar-mobile__list-item"><a href="index.html" class="navbar-mobile__list-item">Home</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Form</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Contact
-                      Us</a></li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">About Us</a>
-                  </li>
-                  <li class="navbar-mobile__list-item"><a href="" class="navbar-mobile__list-item">Feedback</a>
-                  </li>
-                  <li class="navbar-mobile__list-item"><a href="" class="user-link"><i class="fas fa-user"></i>
-                      Doan
-                      Hoang Anh</a></li>
-                </ul>
-              </div>
-
-              <div class="user">
-                <a href="" class="user-link"><i class="fas fa-user"></i> Doan Hoang Anh</a>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
     <!-- End header -->
 
-    <!-- form -->
+    <!-- content -->
     <div class="container">
       <div class="row">
-        <div class=" col-6 col-lg-6">
         <!-- img -->
+        <div class="form__img col-6 col-lg-6">
+
         </div>
+        <!-- form -->
         <div class="box-form col-12 col-lg-6">
           <h1 class="form__header text-center" style="color: #fff;">Personal Health Vitals</h1>
-          <br><br>
           <div class="form__main">
             <form action="https://dantri.com.vn/">
               <!-- row 1 -->
@@ -165,16 +110,31 @@
               </div>
               <!-- btn -->
               <div class="group__btn">
-                <input class="btn" type="reset" value="Reset">
-                <input class="btn" type="submit" value="Submit">
+                <button class="form__butn" id="btn__reset" onclick="form_btn_active()" type="reset">Reset</button>
+                <button class="form__butn" id="btn__submit" onclick="form_btn_active()" type="submit">Submit</button>
               </div>
-
           </div>
           </form>
         </div>
+        <!-- end form -->
       </div>
     </div>
+    <!-- end content -->
   </main>
+
+  <div class="get-username" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="get-username__content">
+          <h1 class="get-username__heading">Can we get your name, please?</h1>
+          <input class="username-input" id="username-input" type="text" placeholder="Your name...">
+          <button class="close-username__btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://kit.fontawesome.com/3c8421013d.js" crossorigin="anonymous"></script>
   <script src="https://github.hubspot.com/odometer/odometer.js"></script>
@@ -184,7 +144,15 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.get("header.html", function (data) {
+        $("#header").html(data);
+      });
+    });
+  </script>
+  <!-- <script src="script.js"></script> -->
+
 </body>
 
 </html>
