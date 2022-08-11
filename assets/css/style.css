@@ -8,7 +8,6 @@ html{
     scroll-behavior: smooth;    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%;
-    height: 20000px;
 }
 
 body{
@@ -22,7 +21,7 @@ body{
     --light-blue-general: #48dbfb;
     --blue-general: rgb(10, 189, 227);
     --blue-rgba: rgba(10, 189, 227, 0.6);
-    --background-color-shadow: rgba(0, 0, 0, 0.7);
+    --background-color-shadow: rgba(0, 0, 0, 0.5);
 }
 
 .section{
