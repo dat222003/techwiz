@@ -46,7 +46,28 @@
         "quantity" : "170",
         "time_to_drink" : "before lunch",
         "note" : "this is a note"
-      }
-    ]
+      }],"appoint" : [{
+        "full_name" : "hieu",
+        "email" : "hieu@gmail.com",
+        "date" : "27",
+        "time" : "170",
+        "address" : "before lunch",
+        "mobile" : "0123456789"
+      },{
+        "full_name" : "dat",
+        "email" : "dat@gmail.com",
+        "date" : "27",
+        "time" : "170",
+        "address" : "before lunch",
+        "mobile" : "0123456789"
+
+      },{
+        "full_name" : "ngoc",
+        "email" : "ngoc@gmail.com",
+        "date" : "27",
+        "time" : "170",
+        "time_to_drink" : "before lunch",
+        "mobile" : "0123456789"
+      }]
   }
 }
