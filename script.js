@@ -1,22 +1,27 @@
-// async function CheckIfUserExist() {
-//   var respon = await fetch("data/data.json"),
-//    data = await respon.json(),
-//    user = data.users.user
-//   var user_input =  document.getElementById("name").value
-//   if (user_input == "") alert("name must be filled")
-//   for (let index = 0; index < user.length; index++) {
-//     var element = user[index];
-//     if (Object.values(element).indexOf(user_input) > -1) {
-//           console.log("existed")
-//           return true
-//     }
-//   }
-//   console.log("not exist")
-//   return false
 
-// }
+function setCookie(key, value, days_till_expire) {
+  const d = new Date();
+  d.setTime(d.getTime() + (days_till_expire * 24 * 60 * 60 * 1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = key + "=" + value + ";" + expires + ";path=/";
+}
 
-var user
+function getCookie(p) {
+  let name = p + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let arr = decodedCookie.split(';');
+  for (let i = 0; i < arr.length; i++) {
+    let component = arr[i];
+    while (component.charAt(0) == ' ') {
+      component = component.substring(1);
+    }
+    if (component.indexOf(name) == 0) {
+      return component.substring(name.length, component.length);
+    }
+  }
+  return "";
+}
+
 
 async function GetData() {
   let respon = await fetch("data/data.json")
@@ -25,31 +30,78 @@ async function GetData() {
 }
 
 async function CheckIfUserExist() {
-  var json_data = await GetData()
-  user = json_data.users.user
-  var user_input = document.getElementById("username-input").value
+  //if user existed load user's datas to cookie
+  var json_data = await GetData();
+  var user = json_data.users.user;
+  var user_input = document.getElementById("username-input").value;
   if (user_input == "") {
-    document.getElementById("username").innerText = "   unknown"
-    document.getElementById("username_resp").innerText = "   unknown"
+    document.getElementById("username").innerText = "Welcome   unknown";
+    document.getElementById("username_resp").innerText = "Welcome   unknown";
     document.querySelector(".get-username").style.display = "none";
-    return
+    return;
   }
-  for (let index = 0; index < user.length; index++) {
-    var element = user[index];
+  for (let i = 0; i < user.length; i++) {
+    var element = user[i];
+    const keys = Object.keys(element),
+      values = Object.values(element),
+      numOfKeys = Object.keys(keys).length;
     if (Object.values(element).indexOf(user_input) > -1) {
-      document.getElementById("username").innerText = "  " + element.name
-      document.getElementById("username_resp").innerText = "  " + element.name
+      for (let j = 0; j < numOfKeys; j++) {
+        setCookie(keys[j], values[j], 1); //expire in 1 day
+      }
+      setUserData();
       document.querySelector(".get-username").style.display = "none";
-      return
+      return;
     }
   }
-  document.getElementById("username").innerText = "  " + user_input
-  
-  document.getElementById("username_resp").innerText = "  " + user_input
+  document.getElementById("username").innerText = "Welcome  " + user_input;
+  document.getElementById("username_resp").innerText = "Welcome  " + user_input;
   document.querySelector(".get-username").style.display = "none";
 }
 
-// // Open mobile navbar list
+function setUserData() {
+  if (document.getElementById("name")) {
+    document.getElementById("name").value = "Welcome  " + getCookie("name");
+  }
+  if (document.getElementById("username")) {
+    document.getElementById("username").innerText = "Welcome  " + getCookie("name");
+  }
+  if (document.getElementById("username_resp")) {
+    document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
+  }
+  if (document.getElementById("height")) {
+    document.getElementById("height").innerText = "Welcome  " + getCookie("height");
+  }
+  if (document.getElementById("weight")) {
+    document.getElementById("weight").innerText = "Welcome  " + getCookie("weight");
+  }
+  if (document.getElementById("bloodtype")) {
+    document.getElementById("bloodtype").innerText = "Welcome  " + getCookie("bloodtype");
+  }
+  if (document.getElementById("bloodpressure")) {
+    document.getElementById("bloodpressure").innerText = "Welcome  " + getCookie("bloodpressure");
+  }
+  if (document.getElementById("bloodsugar")) {
+    document.getElementById("bloodsugar").innerText = "Welcome  " + getCookie("bloodsugar");
+  }
+  if (document.getElementById("age")) {
+    document.getElementById("age").innerText = "Welcome  " + getCookie("age");
+  }
+
+}
+
+window.onload = function () {
+  if (document.cookie != "") {
+    document.querySelector(".get-username").style.display = "none";
+    setUserData();
+    console.log(document.cookie)
+  }
+  
+}
+
+
+
+// Open mobile navbar list
 let mobileNavBtn = document.querySelector(".navbar-mobile_btn");
 let mobileNavList = document.querySelector(".navbar-mobile__list");
 mobileNavBtn.onclick = function () {
