@@ -59,7 +59,6 @@ async function CheckIfUserExist() {
   document.querySelector(".get-username").style.display = "none";
 }
 
-<<<<<<< HEAD
 // Close get username
 let closeBtn = document.querySelector(".close-username__btn");
 closeBtn.onclick = function () {
@@ -67,7 +66,6 @@ closeBtn.onclick = function () {
 }
 
 // // Open mobile navbar list
-=======
 function setUserData() {
   if (document.getElementById("name")) {
     document.getElementById("name").value = "Welcome  " + getCookie("name");
@@ -112,7 +110,6 @@ window.onload = function () {
 
 
 // Open mobile navbar list
->>>>>>> df128072de73e1fc30f1d1133c9cccc75734802e
 let mobileNavBtn = document.querySelector(".navbar-mobile_btn");
 let mobileNavList = document.querySelector(".navbar-mobile__list");
 mobileNavBtn.onclick = function () {
