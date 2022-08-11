@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/search.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/preloader.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/back-to-top.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
     <title>Document</title>
 </head>
@@ -57,7 +58,7 @@
                                 <li class="navbar-list__item"><a href="#about-us" class="navbar-list__item-link">About
                                         Us</a>
                                 </li>
-                                <li class="navbar-list__item"><a href="" class="navbar-list__item-link">Feedback</a>
+                                <li class="navbar-list__item"><a href="#subscribe" class="navbar-list__item-link">Feedback</a>
                                 </li>
                                 <li class="navbar-list__item search-btn"><i class="fas fa-search text-green"></i></li>
                             </ul>
@@ -76,13 +77,13 @@
                                 <ul class="navbar-mobile__list">
                                     <li class="navbar-mobile__list-item"><a href="index.html"
                                             class="navbar-mobile__list-item">Home</a></li>
-                                    <li class="navbar-mobile__list-item"><a href=""
+                                    <li class="navbar-mobile__list-item"><a href="#features"
                                             class="navbar-mobile__list-item">Form</a></li>
                                     <li class="navbar-mobile__list-item"><a href=""
                                             class="navbar-mobile__list-item">Contact Us</a></li>
-                                    <li class="navbar-mobile__list-item"><a href=""
+                                    <li class="navbar-mobile__list-item"><a href="#about-us"
                                             class="navbar-mobile__list-item">About Us</a></li>
-                                    <li class="navbar-mobile__list-item"><a href=""
+                                    <li class="navbar-mobile__list-item"><a href="#subscribe"
                                             class="navbar-mobile__list-item">Feedback</a></li>
                                     <li class="navbar-mobile__list-item"><a href="" class="user-link"><i
                                                 class="fas fa-user" id="username_resp"></i></a></li>
@@ -734,7 +735,7 @@
         <!-- End Authority -->
 
         <!-- Send us -->
-        <section class="section subscribe-section">
+        <section class="section subscribe-section" id="subscribe">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -749,7 +750,7 @@
                                 <div class="col-md-6">
                                     <div class="text-center text-md-end">
                                         <h3 class="subscribe-section__content-heading mt-0">
-                                            Send Us Something
+                                            Send Us Feedback
                                         </h3>
 
                                         <div class="subscribe-section__content-input mx-auto ms-md-auto me-md-0">
@@ -897,6 +898,10 @@
         <!-- End footer -->
     </main>
 
+    <button class="back-to-top">
+        <i class="fas fa-angle-double-up"></i>
+    </button>
+
     <div class="preloader">
         <div class="preloader__load">
             <span></span>
@@ -943,6 +948,7 @@
     <script src="js/feedback.js"></script>
     <script src="js/search.js"></script>
     <script src="js/preloader.js"></script>
+    <script src="js/back-to-top.js"></script>
 </body>
 
 </html>

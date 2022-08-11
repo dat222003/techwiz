@@ -24,6 +24,10 @@
     list-style-type: none;
 }
 
+.search-btn{
+    cursor: pointer;
+}
+
 .search-btn i{
     transform: rotate(90deg);
 }
