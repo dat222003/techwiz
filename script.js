@@ -123,8 +123,6 @@ $("input").on("keydown", function search(e) {
   }
 });
 
-<<<<<<< HEAD
-=======
 //Odometer about us
 setTimeout(function () {
   odometer1.innerHTML = 2500;
@@ -138,7 +136,6 @@ setTimeout(function () {
   odometer3.innerHTML = 7500;
 }, 100);
 
->>>>>>> 3aca02f42ff7d67d54b59b96d3337f57d5605efb
 
 
 function form_btn_active() {
