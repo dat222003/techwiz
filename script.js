@@ -95,7 +95,9 @@ window.onload = function () {
     document.querySelector(".get-username").style.display = "none";
     setUserData();
     console.log(document.cookie)
+    return
   }
+  document.querySelector(".get-username").style.display = "flex";
 }
 
 
