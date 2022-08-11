@@ -88,9 +88,24 @@
         </div>
     </header>
 
+
+    <div class="get-username">
+      <div class="container">
+          <div class="row">
+              <div class="get-username__content">
+                  <h1 class="get-username__heading">Can we get your name, please?</h1>
+                  <input class="username-input" id="username-input" type="text" placeholder="Your name...">
+                  <button class="close-username__btn">
+                      <i class="fas fa-times"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
     <div style="padding: 120px; font-size: larger;" class="container">
         <h1>VIEW ALL INFORMATION ABOUT BOOKING APPOINTMENT</h1>
-        <table class="table table-hover">
+        <table class="table table-hover" id="userDataView">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Name</th>
@@ -109,13 +124,14 @@
             <tbody>
 
                 <tr>
-                    <td>Bui Tuan Kiet</td>
-                    <td>27</td>
-                    <td>170</td>
-                    <td>50</td>
-                    <td>A</td>
-                    <td>80</td>
-                     </tr>
+                    <td ><p id="name"></p></td>
+                    <td ><p id="age"></p></td>
+                    <td ><p id="height"></p></td>
+                    <td ><p id="weight"></p></td>
+                    <td ><p id="bloodtype"></p></td>
+                    <td ><p id="bloodpressure"></p></td>
+                    <td ><p id="bloodsugar"></p></td>
+                  </tr>
 
             </tbody>
         </table>
@@ -124,7 +140,15 @@
 
 
     </div>
-
+    <script src="https://kit.fontawesome.com/3c8421013d.js" crossorigin="anonymous"></script>
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

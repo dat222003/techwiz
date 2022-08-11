@@ -67,32 +67,33 @@ closeBtn.onclick = function () {
 
 // // Open mobile navbar list
 function setUserData() {
-  if (document.getElementById("name")) {
-    document.getElementById("name").value = "Welcome  " + getCookie("name");
-  }
+
   if (document.getElementById("username")) {
     document.getElementById("username").innerText = "Welcome  " + getCookie("name");
   }
   if (document.getElementById("username_resp")) {
     document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
   }
-  if (document.getElementById("height")) {
+
+  if (document.getElementById("userDataform") != null) {
+    document.getElementById("name").value = "Welcome  " + getCookie("name"); 
     document.getElementById("height").value = getCookie("height");
-  }
-  if (document.getElementById("weight")) {
     document.getElementById("weight").value = getCookie("weight");
-  }
-  if (document.getElementById("bloodtype")) {
     document.getElementById("bloodtype").value = getCookie("bloodtype");
-  }
-  if (document.getElementById("bloodpressure")) {
+    document.getElementById("age").value = getCookie("age");
+    document.getElementById("bloodsugar").value = getCookie("bloodsugar");
     document.getElementById("bloodpressure").value = getCookie("bloodpressure");
   }
-  if (document.getElementById("bloodsugar")) {
-    document.getElementById("bloodsugar").value = getCookie("bloodsugar");
-  }
-  if (document.getElementById("age")) {
-    document.getElementById("age").value = getCookie("age");
+
+  if (document.getElementById("userDataView") != null) {
+    document.getElementById("name").innerHTML = getCookie("name"); 
+    document.getElementById("height").innerHTML = getCookie("height");
+    document.getElementById("weight").innerHTML = getCookie("weight");
+    document.getElementById("bloodtype").innerHTML = getCookie("bloodtype");
+    document.getElementById("age").innerHTML = getCookie("age");
+    document.getElementById("bloodsugar").innerHTML = getCookie("bloodsugar");
+    document.getElementById("bloodpressure").innerHTML = getCookie("bloodpressure");
+    
   }
 
 }
