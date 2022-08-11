@@ -1,15 +1,15 @@
 {
   "users" : {
       "user" : [{
-        "name" : "name",
+        "name" : "hieu",
         "age" : "45",
-        "height" : "123",
-        "weight" : "65",
+        "height" : "123 cm",
+        "weight" : "65 kg",
         "bloodtype" : "AB",
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
       },{
-        "name" : "name1",
+        "name" : "dat",
         "age" : "45", 
         "height" : "123",
         "weight" : "65",
@@ -17,13 +17,36 @@
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
       },{
-        "name" : "namename",
+        "name" : "ngoc",
         "age" : "45", 
         "height" : "123",
         "weight" : "65",
         "bloodtype" : "AB", 
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
-      }]
+      }],"dosage" : [{
+        "name" : "hieu",
+        "medicine_name" : "medicine_hieu",
+        "dose" : "27",
+        "quantity" : "170",
+        "time_to_drink" : "before lunch",
+        "note" : "this is a note"
+      },{
+        "name" : "dat",
+        "medicine_name" : "medicine_dat",
+        "dose" : "27",
+        "quantity" : "170",
+        "time_to_drink" : "before lunch",
+        "note" : "this is a note"
+
+      },{
+        "name" : "ngoc",
+        "medicine_name" : "medicine_ngoc",
+        "dose" : "27",
+        "quantity" : "170",
+        "time_to_drink" : "before lunch",
+        "note" : "this is a note"
+      }
+    ]
   }
 }

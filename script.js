@@ -43,8 +43,8 @@ async function CheckIfUserExist() {
   for (let i = 0; i < user.length; i++) {
     var element = user[i];
     const keys = Object.keys(element),
-      values = Object.values(element),
-      numOfKeys = Object.keys(keys).length;
+          values = Object.values(element),
+          numOfKeys = Object.keys(keys).length;
     if (Object.values(element).indexOf(user_input) > -1) {
       for (let j = 0; j < numOfKeys; j++) {
         setCookie(keys[j], values[j], 1); //expire in 1 day
@@ -59,6 +59,26 @@ async function CheckIfUserExist() {
   document.querySelector(".get-username").style.display = "none";
 }
 
+async function loadDosage() {
+  var json_data = await GetData();
+  var dosage = json_data.users.dosage;
+  console.log(dosage)
+  for (let i = 0; i < dosage.length; i++) {
+    var element = dosage[i];
+    const keys = Object.keys(element),
+          values = Object.values(element),
+          numOfKeys = Object.keys(keys).length;
+    if (Object.values(element).indexOf(getCookie("name")) > -1) {
+      for (let j = 0; j < numOfKeys; j++) {
+        setCookie(keys[j], values[j], 1); //expire in 1 day
+      }
+    }
+    return;
+  }
+}
+
+
+
 // Close get username
 let closeBtn = document.querySelector(".close-username__btn");
 closeBtn.onclick = function () {
@@ -68,6 +88,7 @@ closeBtn.onclick = function () {
 // // Open mobile navbar list
 function setUserData() {
 
+  //load to navbar
   if (document.getElementById("username")) {
     document.getElementById("username").innerText = "Welcome  " + getCookie("name");
   }
@@ -75,6 +96,7 @@ function setUserData() {
     document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
   }
 
+  // set data to form
   if (document.getElementById("userDataform") != null) {
     document.getElementById("name").value = "Welcome  " + getCookie("name"); 
     document.getElementById("height").value = getCookie("height");
@@ -85,16 +107,25 @@ function setUserData() {
     document.getElementById("bloodpressure").value = getCookie("bloodpressure");
   }
 
+  // set data to table
   if (document.getElementById("userDataView") != null) {
-    document.getElementById("name").innerHTML = getCookie("name"); 
+    document.getElementById("name").innerHTML = getCookie("name");
     document.getElementById("height").innerHTML = getCookie("height");
     document.getElementById("weight").innerHTML = getCookie("weight");
     document.getElementById("bloodtype").innerHTML = getCookie("bloodtype");
     document.getElementById("age").innerHTML = getCookie("age");
     document.getElementById("bloodsugar").innerHTML = getCookie("bloodsugar");
     document.getElementById("bloodpressure").innerHTML = getCookie("bloodpressure");
-    
+    loadDosage();
+    document.getElementById("medicine_name").innerHTML = getCookie("medicine_name");
+    document.getElementById("dose").innerHTML = getCookie("dose");
+    document.getElementById("quantity").innerHTML = getCookie("quantity");
+    document.getElementById("time_to_drink").innerHTML = getCookie("time_to_drink");
+    document.getElementById("note").innerHTML = getCookie("note");
+
   }
+
+
 
 }
 
@@ -102,7 +133,7 @@ window.onload = function () {
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
     setUserData();
-    console.log(document.cookie)
+    // console.log(document.cookie)
     return
   }
   document.querySelector(".get-username").style.display = "flex";
