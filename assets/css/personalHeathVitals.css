@@ -1,0 +1,105 @@
+
+:root {
+  --background-color: #1d2b3a;
+  --border-color: aqua;
+  --light-color: #03c8f4;
+  --form-text-color: #fff;
+  --normal-color: rgba(255, 255, 255, 0.25);
+}
+
+.box-form {
+  margin-top: 15rem;
+  font-size: 1.3rem;
+  background-color: #1d2b3a;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.form-input label {
+  position: absolute;
+  color: var(--form-text-color);
+  margin-top: -35px;
+  font-size: 1.5rem;
+}
+
+.form-input {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--normal-color);
+  background: var(--background-color);
+  outline: none;
+  color: var(--form-text-color);
+  transition: 0.5s;
+}
+
+.form-input input:valid,
+.form-input input:focus {
+  border: 2px solid var(--border-color);
+  box-shadow:
+    0 0 3px var(--light-color),
+    0 0 6px var(--light-color),
+    0 0 9px var(--light-color);
+}
+
+.form-input span {
+  position: absolute;
+  color: var(--normal-color);
+  padding: 6px;
+  left: 0;
+  margin-top: 2px;
+  pointer-events: none;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+.form-input input:valid~span,
+.form-input input:focus~span {
+  color: var(--border-color);
+  transform: translateX(6px) translateY(-8px);
+  padding: 0 6px;
+  font-size: 9px;
+  background: var(--background-color);
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+}
+
+.group__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.group__btn .form__butn {
+  width: 100px;
+  height: 20px;
+  color: #fff;
+  margin: 0 50px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  font-size: 1.2rem;
+  background: var(--background-color);
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+}
+
+.group__btn .form__butn.active {
+  background-color: #03c8f4;
+  border: 2px solid var(--border-color);
+  box-shadow:
+    0 0 3px var(--light-color),
+    0 0 6px var(--light-color),
+    0 0 9px var(--light-color);
+}
+

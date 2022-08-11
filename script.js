@@ -59,6 +59,13 @@ async function CheckIfUserExist() {
   document.querySelector(".get-username").style.display = "none";
 }
 
+// Close get username
+let closeBtn = document.querySelector(".close-username__btn");
+closeBtn.onclick = function () {
+  document.querySelector(".get-username").style.display = "none";
+}
+
+// // Open mobile navbar list
 function setUserData() {
   if (document.getElementById("name")) {
     document.getElementById("name").value = "Welcome  " + getCookie("name");
@@ -70,22 +77,22 @@ function setUserData() {
     document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
   }
   if (document.getElementById("height")) {
-    document.getElementById("height").innerText = "Welcome  " + getCookie("height");
+    document.getElementById("height").value = getCookie("height");
   }
   if (document.getElementById("weight")) {
-    document.getElementById("weight").innerText = "Welcome  " + getCookie("weight");
+    document.getElementById("weight").value = getCookie("weight");
   }
   if (document.getElementById("bloodtype")) {
-    document.getElementById("bloodtype").innerText = "Welcome  " + getCookie("bloodtype");
+    document.getElementById("bloodtype").value = getCookie("bloodtype");
   }
   if (document.getElementById("bloodpressure")) {
-    document.getElementById("bloodpressure").innerText = "Welcome  " + getCookie("bloodpressure");
+    document.getElementById("bloodpressure").value = getCookie("bloodpressure");
   }
   if (document.getElementById("bloodsugar")) {
-    document.getElementById("bloodsugar").innerText = "Welcome  " + getCookie("bloodsugar");
+    document.getElementById("bloodsugar").value = getCookie("bloodsugar");
   }
   if (document.getElementById("age")) {
-    document.getElementById("age").innerText = "Welcome  " + getCookie("age");
+    document.getElementById("age").value = getCookie("age");
   }
 
 }
@@ -95,7 +102,9 @@ window.onload = function () {
     document.querySelector(".get-username").style.display = "none";
     setUserData();
     console.log(document.cookie)
+    return
   }
+  document.querySelector(".get-username").style.display = "flex";
 }
 
 
@@ -107,12 +116,6 @@ mobileNavBtn.onclick = function () {
   mobileNavList.classList.toggle("open");
 }
 
-// Close get username
-let closeBtn = document.querySelector(".close-username__btn");
-closeBtn.onclick = function () {
-  document.querySelector(".get-username").style.display = "none";
-}
-
 // Get username value
 $("input").on("keydown", function search(e) {
   if (e.keyCode == 13) {
@@ -122,7 +125,18 @@ $("input").on("keydown", function search(e) {
 
 
 
+function form_btn_active() {
+  var btn_reset = document.getElementById("btn__reset");
+  var btn_submit = document.getElementById("btn__submit");
 
+  if (btn_reset.className = "form__butn active") {
+
+  }
+  btn_reset.classList.toggle("active");
+  btn_submit.classList.toggle("active");
+
+  console.log(btn_reset.className);
+}
 
 
 

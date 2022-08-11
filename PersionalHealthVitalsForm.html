@@ -27,6 +27,7 @@
 
 <body>
   <main role="main" id="main">
+
     <!-- Header -->
     <header id="header">
       <div class="container">
@@ -87,12 +88,14 @@
     </header>
     <!-- End header -->
 
-    <!-- form -->
+    <!-- content -->
     <div class="container">
       <div class="row">
-        <div class=" col-6 col-lg-6">
         <!-- img -->
+        <div class="form__img col-6 col-lg-6">
+
         </div>
+        <!-- form -->
         <div class="box-form col-12 col-lg-6">
           <h1 class="form__header text-center" style="color: #fff;">Personal Health Vitals</h1>
           <br><br>
@@ -142,7 +145,7 @@
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
                   <div class="form-input">
                     <label for="bloodt">Blood Type</label>
-                    <input type="text" id="bloodt" required="required">
+                    <input type="text" id="bloodtype" required="required">
                     <span>your blood type</span>
                   </div>
                 </div>
@@ -150,7 +153,7 @@
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
                   <div class="form-input">
                     <label for="bloodp">Blood Pressure (mmHg)</label>
-                    <input type="text" id="bloodp" required="required">
+                    <input type="text" id="bloodpressure" required="required">
                     <span>your blood Pressure</span>
                   </div>
                 </div>
@@ -158,23 +161,37 @@
                 <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 col-12">
                   <div class="form-input">
                     <label for="bloods">Blood Sugar (mg/dl)</label>
-                    <input type="text" id="bloods" required="required">
+                    <input type="text" id="bloodsugar" required="required">
                     <span>your blood Sugar</span>
                   </div>
                 </div>
               </div>
               <!-- btn -->
               <div class="group__btn">
-                <input class="btn" type="reset" value="Reset">
-                <input class="btn" type="submit" value="Submit">
+                <button class="form__butn" id="btn__reset" onclick="form_btn_active()" type="reset">Reset</button>
+                <button class="form__butn" id="btn__submit" onclick="form_btn_active()" type="submit">Submit</button>
               </div>
-
           </div>
           </form>
         </div>
+        <!-- end form -->
       </div>
     </div>
+    <!-- end content -->
   </main>
+  <div class="get-username" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="get-username__content">
+          <h1 class="get-username__heading">Can we get your name, please?</h1>
+          <input class="username-input" id="username-input" type="text" placeholder="Your name...">
+          <button class="close-username__btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="get-username">
     <div class="container">
@@ -198,7 +215,15 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.get("header.html", function (data) {
+        $("#header").html(data);
+      });
+    });
+  </script>
+  <!-- <script src="script.js"></script> -->
+
 </body>
 
 </html>
