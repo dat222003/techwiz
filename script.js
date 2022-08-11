@@ -96,7 +96,6 @@ window.onload = function () {
     setUserData();
     console.log(document.cookie)
   }
-  
 }
 
 
