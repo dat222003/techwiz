@@ -20,10 +20,15 @@ body{
     --white-general: #fff;
     --text-color: #757575;
     --light-blue-general: #48dbfb;
-    --blue-general: #0abde3;
+    --blue-general: rgb(10, 189, 227);
+    --blue-rgba: rgba(10, 189, 227, 0.6);
     --background-color-shadow: rgba(0, 0, 0, 0.7);
 }
 
 .section{
     padding: 64px 0;
+}
+
+.text-green{
+    color: var(--blue-general);
 }

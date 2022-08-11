@@ -1,0 +1,98 @@
+.authority-section__content-heading .sub-title,
+.authority-section__content-heading .main-title{
+    color: var(--black-general);
+}
+
+.main-title{
+    font-size: 4rem;
+}
+
+.authority-section__content-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.authority-section__content-heading .introduce{
+    max-width: 45ch;
+}
+
+.authority-card{
+    display: grid;
+    background-color: var(--black-general);
+    border-top: 5px solid var(--blue-general);
+    padding: 40px 20px;
+    gap: 2rem;
+    margin-bottom: 110px;
+}
+
+.authority-card__head-position{
+    font-size: 1.4rem;
+    color: var(--blue-general);
+}
+
+.authority-card__head-name,
+.authority-card__head-position{
+    text-align: center;
+}
+
+.authority-card__body{
+    position: relative;
+    margin-bottom: -150px;
+}
+
+.authority-card__body img{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.authority-card__overlay{
+    position: absolute;
+    display: grid;
+    inset: 0;
+    place-items: center;
+    background-color: var(--blue-rgba);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+.authority-card__body:hover .authority-card__overlay{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+
+.authority-card__overlay-list{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s linear;
+}
+
+.authority-card__overlay-list-item{
+    display: flex;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: var(--white-general);
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.authority-card__overlay-list-item i{
+    color: var(--text-color);
+}
+
+.authority-card__overlay-list-item i:hover{
+    color: var(--blue-general);
+}
