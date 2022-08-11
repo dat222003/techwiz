@@ -8,11 +8,21 @@
     .navbar-mobile {
         display: none;
     }
+
+    .subscribe-section {
+        margin-bottom: -200px;
+    }
+
+    .footer-section {
+        padding-top: 130px;
+    }
 }
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1024px){
-
+    .subscribe-section::after {
+        display: none;
+    }
 }
 
 /* Small Tablet */
@@ -32,6 +42,18 @@
 
     .self-health-tips__header .sub-title{
         max-width: 100%;
+    }
+
+    .subscribe-section {
+        clip-path: none;
+    }
+
+    .subscribe-section::after {
+        display: none;
+    }
+
+    .subscribe-section__content {
+        justify-content: center;
     }
 }
 

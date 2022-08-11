@@ -1,0 +1,79 @@
+.subscribe-section{
+    clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-section::after{
+    content: url(https://template.viserlab.com/viserlife/demo/assets/images/cta-shape.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subscribe-section__content{
+    padding: 60px 80px 80px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--blue-general);
+}
+
+.subscribe-section__content::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    top: -20px;
+    right: -50px;
+    transform: rotate(45deg);
+    aspect-ratio: 2;
+    background-color: var(--black-general);
+}
+
+.subscribe-section__content img{
+    align-self: center;
+    width: 100%;
+    max-width: 180px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.subscribe-section__content-heading{
+    color: var(--white-general);
+}
+
+.subscribe-section__content-input{
+    display: flex;
+    align-items: center;
+    max-width: 280px;
+    border: 1px solid var(--white-general);
+}
+
+.subscribe-section__content-input input{
+    width: 100%;
+    background-color: var(--blue-general);
+    color: var(--white-general);
+    font-size: 1.6rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-color: transparent;
+}
+
+.subscribe-section__content-input input::placeholder{
+    color: var(--white-general);
+}
+
+.subscribe-section__content-input button{
+    font-size: 2rem;
+    background-color: var(--blue-general);
+    color: var(--white-general);
+    border: none;
+    margin-right: 10px;
+}
+
+.subscribe-section__content-input button:hover{
+    background-color: var(--white-general);
+    color: var(--blue-general);
+    padding: 10px;
+}
