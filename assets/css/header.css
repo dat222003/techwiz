@@ -24,7 +24,7 @@
     list-style-type: none;
 }
 
-.search-btn{
+.search-btn i{
     transform: rotate(90deg);
 }
 
