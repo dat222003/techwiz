@@ -49,6 +49,7 @@ async function CheckIfUserExist() {
       for (let j = 0; j < numOfKeys; j++) {
         setCookie(keys[j], values[j], 1); //expire in 1 day
       }
+      await loadDosage()
       setUserData();
       document.querySelector(".get-username").style.display = "none";
       return;
@@ -62,7 +63,6 @@ async function CheckIfUserExist() {
 async function loadDosage() {
   var json_data = await GetData();
   var dosage = json_data.users.dosage;
-  console.log(dosage)
   for (let i = 0; i < dosage.length; i++) {
     var element = dosage[i];
     const keys = Object.keys(element),
@@ -73,7 +73,6 @@ async function loadDosage() {
         setCookie(keys[j], values[j], 1); //expire in 1 day
       }
     }
-    return;
   }
 }
 
@@ -107,8 +106,9 @@ function setUserData() {
     document.getElementById("bloodpressure").value = getCookie("bloodpressure");
   }
 
-  // set data to table
+  // set data to view
   if (document.getElementById("userDataView") != null) {
+    //user's info
     document.getElementById("name").innerHTML = getCookie("name");
     document.getElementById("height").innerHTML = getCookie("height");
     document.getElementById("weight").innerHTML = getCookie("weight");
@@ -116,7 +116,7 @@ function setUserData() {
     document.getElementById("age").innerHTML = getCookie("age");
     document.getElementById("bloodsugar").innerHTML = getCookie("bloodsugar");
     document.getElementById("bloodpressure").innerHTML = getCookie("bloodpressure");
-    loadDosage();
+    //dosage
     document.getElementById("medicine_name").innerHTML = getCookie("medicine_name");
     document.getElementById("dose").innerHTML = getCookie("dose");
     document.getElementById("quantity").innerHTML = getCookie("quantity");
@@ -133,7 +133,7 @@ window.onload = function () {
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
     setUserData();
-    // console.log(document.cookie)
+    console.log(document.cookie)
     return
   }
   document.querySelector(".get-username").style.display = "flex";
