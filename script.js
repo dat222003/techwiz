@@ -53,9 +53,9 @@ async function CheckIfUserExist() {
       document.querySelector(".get-username").style.display = "none";
       return;
     }
+    setCookie("name", user_input, 1)
+    setUserData();
   }
-  document.getElementById("username").innerText = "Welcome  " + user_input;
-  document.getElementById("username_resp").innerText = "Welcome  " + user_input;
   document.querySelector(".get-username").style.display = "none";
 }
 
@@ -121,17 +121,17 @@ $("input").on("keydown", function search(e) {
 });
 
 //Odometer about us
-setTimeout(function () {
-  odometer1.innerHTML = 2500;
-}, 100);
+// setTimeout(function () {
+//   odometer1.innerHTML = 2500;
+// }, 100);
 
-setTimeout(function () {
-  odometer2.innerHTML = 500;
-}, 100);
+// setTimeout(function () {
+//   odometer2.innerHTML = 500;
+// }, 100);
 
-setTimeout(function () {
-  odometer3.innerHTML = 7500;
-}, 100);
+// setTimeout(function () {
+//   odometer3.innerHTML = 7500;
+// }, 100);
 
 
 
