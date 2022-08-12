@@ -1,6 +1,7 @@
 {
   "users" : {
-      "user" : [{
+      "user" : 
+      [{
         "name" : "hieu",
         "age" : "45",
         "height" : "123 cm",
@@ -24,7 +25,9 @@
         "bloodtype" : "AB", 
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
-      }],"dosage" : [{
+      }],
+      "dosage" : 
+      [{
         "name" : "hieu",
         "medicine_name" : "medicine_hieu",
         "dose" : "27",
@@ -46,7 +49,9 @@
         "quantity" : "170",
         "time_to_drink" : "before lunch",
         "note" : "this is a note"
-      }],"appoint" : [{
+      }],
+      "appoint" : 
+      [{
         "full_name" : "hieu",
         "email" : "hieu@gmail.com",
         "date" : "27",

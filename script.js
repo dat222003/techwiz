@@ -108,7 +108,7 @@ function setUserData() {
 
   // set data to form
   if (document.getElementById("userDataform") != null) {
-    document.getElementById("name").value = "Welcome  " + getCookie("name"); 
+    document.getElementById("name").value = getCookie("name"); 
     document.getElementById("height").value = getCookie("height");
     document.getElementById("weight").value = getCookie("weight");
     document.getElementById("bloodtype").value = getCookie("bloodtype");
@@ -151,7 +151,6 @@ window.onload = function () {
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
     setUserData();
-    console.log(document.cookie)
     return
   }
   document.querySelector(".get-username").style.display = "flex";
