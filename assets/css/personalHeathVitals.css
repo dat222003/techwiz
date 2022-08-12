@@ -108,17 +108,18 @@ h1 {
 }
 
 .form__img {
-  margin-top: 15rem;
   border-radius: 20px;
+  margin-top: 15rem;
   background: linear-gradient(to right, #dde6ed, #edf4f8);
 }
 
 .form__img img {
-  width: 650px;
+  width: 100%;
   position: relative;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  border-radius: 20px;
 }
 
 .form__radio {

@@ -23,7 +23,26 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/features.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/about-us-section.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/get-username.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+
+    <style>
+        h1 {
+            font-size: 4rem;
+        }
+
+        th {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        .table__content{
+            margin: 40px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -90,107 +109,249 @@
 
 
     <div class="get-username">
-      <div class="container">
-          <div class="row">
-              <div class="get-username__content">
-                  <h1 class="get-username__heading">Can we get your name, please?</h1>
-                  <input class="username-input" id="username-input" type="text" placeholder="Your name...">
-                  <button class="close-username__btn">
-                      <i class="fas fa-times"></i>
-                  </button>
-              </div>
-          </div>
-      </div>
-  </div>
+        <div class="container">
+            <div class="row">
+                <div class="get-username__content">
+                    <h1 class="get-username__heading">Can we get your name, please?</h1>
+                    <input class="username-input" id="username-input" type="text" placeholder="Your name...">
+                    <button class="close-username__btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div style="padding: 120px; font-size: larger;" class="container">
 
-        <h1>View all information about <i>PERSONAL HEALTH VITALS</i></h1>
-        <table class="table table-hover" id="userDataView">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Height(cm)</th>
-                    <th scope="col">Weight(kg)</th>
-                    <th scope="col">Blood type</th>
-                    <th scope="col">Blood pressure</th>
-                    <th scope="col">Blood sugar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td ><p id="name"></p></td>
-                    <td ><p id="age"></p></td>
-                    <td ><p id="height"></p></td>
-                    <td ><p id="weight"></p></td>
-                    <td ><p id="bloodtype"></p></td>
-                    <td ><p id="bloodpressure"></p></td>
-                    <td ><p id="bloodsugar"></p></td>
-                  </tr>
-            </tbody>
-        </table>
-       
-        <h1>View all information about <i>MEDICINE DOSAGE</i></h1>
-        <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col" >Medicine Name</th>
-                    <th scope="col" >Dose</th>
-                    <th scope="col" >Quantity</th>
-                    <th scope="col" >Time to Drink</th>
-                    <th scope="col" >Note</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div class="table__content">
+            <h1>View all information about <i>PERSONAL HEALTH VITALS</i></h1>
+            <table class="table table-hover" id="userDataView">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Height(cm)</th>
+                        <th scope="col">Weight(kg)</th>
+                        <th scope="col">Blood type</th>
+                        <th scope="col">Blood pressure</th>
+                        <th scope="col">Blood sugar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p id="name"></p>
+                        </td>
+                        <td>
+                            <p id="age"></p>
+                        </td>
+                        <td>
+                            <p id="height"></p>
+                        </td>
+                        <td>
+                            <p id="weight"></p>
+                        </td>
+                        <td>
+                            <p id="bloodtype"></p>
+                        </td>
+                        <td>
+                            <p id="bloodpressure"></p>
+                        </td>
+                        <td>
+                            <p id="bloodsugar"></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-                <tr>
-                    <td id="medicine_name" ></td>
-                    <td id="dose" ></td>
-                    <td id="quantity" ></td>
-                    <td id="time_to_drink" ></td>
-                    <td id="note" ></td>
-                
-                </tr>
+        <div class="table__content">
+            <h1>View all information about <i>MEDICINE DOSAGE</i></h1>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Medicine Name</th>
+                        <th scope="col">Dose</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Time to Drink</th>
+                        <th scope="col">Note</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-            </tbody>
-        </table>
+                    <tr>
+                        <td id="medicine_name"></td>
+                        <td id="dose"></td>
+                        <td id="quantity"></td>
+                        <td id="time_to_drink"></td>
+                        <td id="note"></td>
 
-        <h1>View all information about <i>BOOKING APPOINTMENT</i></h1>
-        <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Full Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Mobile</th>
+                    </tr>
 
+                </tbody>
+            </table>
+        </div>
 
-                </tr>
-            </thead>
-            <tbody>
-
-                <tr>
-                    <td id="full_name"></td>
-                    <td id="email"></td>
-                    <td id="date"></td>
-                    <td id="time"></td>
-                    <td id="address"></td>
-                    <td id="mobile"></td>
-                </tr>
-
-            </tbody>
-        </table>
-
-
-
-
+        <div class="table__content">
+            <h1>View all information about <i>BOOKING APPOINTMENT</i></h1>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Appointment Date</th>
+                        <th scope="col">Appointment Time</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Mobile</th>
 
 
+                    </tr>
+                </thead>
+                <tbody>
 
+                    <tr>
+                        <td id="full_name"></td>
+                        <td id="email"></td>
+                        <td id="date"></td>
+                        <td id="time"></td>
+                        <td id="address"></td>
+                        <td id="mobile"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="footer-section">
+            <section class="section">
+                <div class="container">
+                    <div class="row g-4 justify-content-xl-between">
+                        <div class="col-md-6 col-lg-3 col-xl-4">
+                            <h4 class="info-section__title">Contact Info</h4>
+                            <ul class="info-section__list info-section__list">
+                                <li class="info-section__list-item">
+                                    <p><i class="text-green fas fa-map-marker-alt"></i> 54 Le Thanh Nghi Street, Ha
+                                        Noi, Viet Nam</p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>
+                                        <i class="text-green far fa-envelope"></i>
+                                        hoanganh.doan0804@gmail.com
+                                    </p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>
+                                        <i class="text-green fas fa-mobile-alt"></i>
+                                        +84-234-56789000
+                                    </p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>
+                                        <i class="text-green fas fa-phone"></i>
+                                        +84-234-56789000
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 col-xl-2">
+                            <h4 class="info-section__title">More</h4>
+                            <ul class="info-section__list info-section__list">
+                                <li class="info-section__list-item">
+                                    <p>
+                                        About Us
+                                    </p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>
+                                        FAQ
+                                    </p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>
+                                        Membership
+                                    </p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>
+                                        Blog
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 col-xl-2">
+                            <h4 class="info-section__title">Link</h4>
+                            <ul class="info-section__list info-section__list">
+                                <li class="info-section__list-item">
+                                    <p>Form</p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>Feedback</p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>View</p>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <p>Authority</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 col-xl-4">
+                            <h4 class="info-section__title">Time Open</h4>
+                            <ul class="info-section__list info-section__list-underline">
+                                <li class="info-section__list-item">
+                                    <span class="d-inline-block  info-section__list-time">
+                                        <i class="far fa-clock text-green"></i>&emsp;10:00 AM</span>
+                                    <span class="d-inline-block  info-section__list-action">Active</span>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <span class="d-inline-block  info-section__list-time">
+                                        <i class="far fa-clock text-green"></i>&emsp;03:45 PM</span>
+                                    <span class="d-inline-block  info-section__list-action">Active</span>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <span class="d-inline-block  info-section__list-time">
+                                        <i class="far fa-clock text-green"></i>&emsp;04.20 PM</span>
+                                    <span class="d-inline-block  info-section__list-action">Active</span>
+                                </li>
+
+                                <li class="info-section__list-item">
+                                    <span class="d-inline-block  info-section__list-time">
+                                        <i class="far fa-clock text-green"></i>&emsp;05.00 PM</span>
+                                    <span class="d-inline-block  info-section__list-action">Close</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer__copyright">
+                <p class="copyright mb-0 sm-text text-white text-center">
+                    Copyright © 2022. All Rights Reserved By <span class="text-green">BTK Team</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End footer -->
+
     <script src="https://kit.fontawesome.com/3c8421013d.js" crossorigin="anonymous"></script>
     <script src="https://github.hubspot.com/odometer/odometer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
