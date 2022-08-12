@@ -32,7 +32,7 @@
         "medicine_name" : "medicine_hieu",
         "dose" : "27",
         "quantity" : "170",
-        "time_to_drink" : "before lunch",
+        "time_to_drink" : "before lunch", 
         "note" : "this is a note"
       },{
         "name" : "dat",
