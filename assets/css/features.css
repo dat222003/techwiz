@@ -2,6 +2,20 @@
     padding-top: 100px;
 }
 
+.features-section__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-section__heading{
+    font-size: 4rem;
+}
+
+.features-section__header .sub-title{
+    color: var(--text-color);
+}
+
 .features__item{
     text-align: center;
     margin: 30px 0;

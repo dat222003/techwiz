@@ -55,6 +55,10 @@
     .subscribe-section__content {
         justify-content: center;
     }
+
+    .contact-map{
+        padding: 0;
+    }
 }
 
 /* Mobile */

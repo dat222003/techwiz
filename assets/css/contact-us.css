@@ -1,0 +1,51 @@
+.contact-us-section{
+    padding-top: 100px;
+    margin-top: 64px;
+}
+
+.contact-map{
+    padding-right: 50px;
+}
+
+.contact-info__heading{
+    font-size: 3rem;
+}
+
+.contact-info__subtile{
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.contact-info__card{
+    position: relative;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(248, 244, 244);
+}
+
+.contact-info__card::before{
+    content: "";
+    position: absolute;
+    left: -2.5px;
+    top: 52px;
+    width: 4px;
+    height: 28px;
+    background-color: #f3a952;
+}
+
+.contact-info__card-heading{
+    color: #064ACB;
+}
+
+.contact-info__card p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.contact-info__heading,
+.contact-info__subtile,
+.contact-info__card,
+.contact-info__card{
+    margin: 20px 0;
+}
