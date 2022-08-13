@@ -94,6 +94,11 @@ async function loadAppoint(name) {
   }
 }
 
+function CountBMI(weight, height){
+  console.log(parseFloat(weight))
+  return parseFloat(weight) / (parseFloat(height)/100*parseFloat(height)/100);
+}
+
 // Close get username
 let closeBtn = document.querySelector(".close-username__btn");
 closeBtn.onclick = function () {
@@ -112,8 +117,8 @@ function setUserData() {
   //vital health form
   if (document.getElementById("userDataformVitalHealth") != null) {
     document.getElementById("name").value = getCookie("name");
-    document.getElementById("height").value = getCookie("height");
-    document.getElementById("weight").value = getCookie("weight");
+    document.getElementById("height").value = getCookie("height") + " cm";
+    document.getElementById("weight").value = getCookie("weight") + " kg";
     document.getElementById("bloodtype").value = getCookie("bloodtype");
     document.getElementById("age").value = getCookie("age");
     document.getElementById("bloodsugar").value = getCookie("bloodsugar");
@@ -141,8 +146,9 @@ function setUserData() {
   if (document.getElementById("userDataView") != null) {
     //user's info
     document.getElementById("name").innerHTML = getCookie("name");
-    document.getElementById("height").innerHTML = getCookie("height");
-    document.getElementById("weight").innerHTML = getCookie("weight");
+    document.getElementById("height").innerHTML = getCookie("height") + " cm";
+    document.getElementById("weight").innerHTML = getCookie("weight") + " kg";
+    document.getElementById("BMI").innerHTML = CountBMI(getCookie("weight"),getCookie("height")).toFixed(2);
     document.getElementById("bloodtype").innerHTML = getCookie("bloodtype");
     document.getElementById("age").innerHTML = getCookie("age");
     document.getElementById("bloodsugar").innerHTML = getCookie("bloodsugar");

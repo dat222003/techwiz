@@ -4,24 +4,24 @@
       [{
         "name" : "hieu",
         "age" : "45",
-        "height" : "159 cm",
-        "weight" : "65 kg",
+        "height" : "159",
+        "weight" : "65",
         "bloodtype" : "AB",
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
       },{
         "name" : "dat",
         "age" : "45", 
-        "height" : "159 cm",
-        "weight" : "65 kg",
+        "height" : "159",
+        "weight" : "65",
         "bloodtype" : "AB", 
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
       },{
         "name" : "ngoc",
         "age" : "45", 
-        "height" : "159 cm",
-        "weight" : "65 kg",
+        "height" : "159",
+        "weight" : "65",
         "bloodtype" : "AB", 
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
