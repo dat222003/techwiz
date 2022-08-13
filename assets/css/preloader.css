@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --loader-part-size: 24px;
     --loader-size: calc(var(--loader-part-size) * 3);
 }
@@ -126,4 +126,4 @@
     100% {
         transform: rotate(180deg) translate(0, 0);
     }
-}
+} */

@@ -107,7 +107,7 @@ function setUserData() {
     document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
 
   // set data to form
-  if (document.getElementById("userDataform") != null) {
+  if (document.getElementById("userDataformVitalHealth") != null) {
     document.getElementById("name").value = getCookie("name"); 
     document.getElementById("height").value = getCookie("height");
     document.getElementById("weight").value = getCookie("weight");
@@ -115,6 +115,15 @@ function setUserData() {
     document.getElementById("age").value = getCookie("age");
     document.getElementById("bloodsugar").value = getCookie("bloodsugar");
     document.getElementById("bloodpressure").value = getCookie("bloodpressure");
+  }
+
+  if (document.getElementById("userDataformAppointment") != null) {
+    document.getElementById("name").value = getCookie("full_name"); 
+    document.getElementById("email").value = getCookie("email"); 
+    document.getElementById("date").value = getCookie("date"); 
+    document.getElementById("time").value = getCookie("time"); 
+    document.getElementById("address").value = getCookie("address"); 
+    document.getElementById("mobile").value = getCookie("mobile"); 
   }
 
   // set data to view
@@ -148,19 +157,6 @@ function setUserData() {
 }
 
 window.onload = async function () {
-  // const header = document.querySelector("#header");
-  // await fetch("header.html")
-  //   .then(resp => resp.text())
-  //   .then(data => {
-  //     header.innerHTML = data
-  //   })
-
-  // const footer = document.querySelector("#footer");
-  // await fetch("footer.html")
-  //   .then(resp => resp.text())
-  //   .then(data => {
-  //     footer.innerHTML = data
-  //   })
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
     setUserData();

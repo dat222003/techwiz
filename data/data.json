@@ -4,7 +4,7 @@
       [{
         "name" : "hieu",
         "age" : "45",
-        "height" : "123 cm",
+        "height" : "159 cm",
         "weight" : "65 kg",
         "bloodtype" : "AB",
         "bloodpressure" : "90 mmHg",
@@ -12,16 +12,16 @@
       },{
         "name" : "dat",
         "age" : "45", 
-        "height" : "123",
-        "weight" : "65",
+        "height" : "159 cm",
+        "weight" : "65 kg",
         "bloodtype" : "AB", 
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
       },{
         "name" : "ngoc",
         "age" : "45", 
-        "height" : "123",
-        "weight" : "65",
+        "height" : "159 cm",
+        "weight" : "65 kg",
         "bloodtype" : "AB", 
         "bloodpressure" : "90 mmHg",
         "bloodsugar" : "120 mg/dl"
@@ -54,24 +54,24 @@
       [{
         "full_name" : "hieu",
         "email" : "hieu@gmail.com",
-        "date" : "27",
-        "time" : "170",
-        "address" : "before lunch",
+        "date" : "13/08/2022",
+        "time" : "9h",
+        "address" : "54-le thanh nghi-ha noi",
         "mobile" : "0123456789"
       },{
         "full_name" : "dat",
         "email" : "dat@gmail.com",
-        "date" : "27",
-        "time" : "170",
-        "address" : "before lunch",
+        "date" : "10/09/2022",
+        "time" : "9h",
+        "address" : "54-le thanh nghi-ha noi",
         "mobile" : "0123456789"
 
       },{
         "full_name" : "ngoc",
         "email" : "ngoc@gmail.com",
-        "date" : "27",
-        "time" : "170",
-        "time_to_drink" : "before lunch",
+        "date" : "10/09/2022",
+        "time" : "9h",
+        "time_to_drink" : "54-le thanh nghi-ha noi",
         "mobile" : "0123456789"
       }]
   }
