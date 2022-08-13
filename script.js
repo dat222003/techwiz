@@ -51,12 +51,12 @@ async function CheckIfUserExist() {
       }
       await loadDosage(user_input)
       await loadAppoint(user_input)
-      setUserData();
+      LoadUserData();
       document.querySelector(".get-username").style.display = "none";
       return;
     }
     setCookie("name", user_input, 1)
-    setUserData();
+    LoadUserData();
   }
   document.querySelector(".get-username").style.display = "none";
 }
@@ -106,7 +106,7 @@ closeBtn.onclick = function () {
 }
 
 // // Open mobile navbar list
-function setUserData() {
+function LoadUserData() {
 
   //load to navbar
   document.getElementById("username").innerText = "Welcome  " + getCookie("name");
@@ -183,7 +183,7 @@ window.onload = async function () {
     })
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
-    setUserData();
+    LoadUserData();
     return
   }
   document.querySelector(".get-username").style.display = "flex";
