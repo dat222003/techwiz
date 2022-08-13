@@ -155,14 +155,13 @@
                 <div class="box-form col-12 col-lg-6">
                     <h1 class="form__header text-center" style="color: #fff;">Medicine Dosage</h1>
                     <div class="form__main" onload="setUserData()">
-                        <form action="https://dantri.com.vn/">
-                            <!-- row 1 -->
+                        <form id="DosageForm">
                             <div class="row">
                                 <!-- input name -->
                                 <div class="col-12 col-md-6">
                                     <div class="form-input">
-                                        <label for="form-name">Medicine Name</label>
-                                        <input type="text" id="form-name" required="required">
+                                        <label for="medicine_name">Medicine Name</label>
+                                        <input type="text" id="medicine_name" required="required">
                                         <span>Enter Medicine Name</span>
                                     </div>
                                 </div>
@@ -189,26 +188,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- row 2 -->
                             <div class="row">
                                 <!-- input count -->
                                 <div class="col-12 col-md-6">
                                     <div class="form-input">
-                                        <label for="mcount">Medicine Count</label>
-                                        <input type="text" id="mcount" required="required">
-                                        <span>Enter Medicine count</span>
+                                        <label for="quantity">Medicine Count</label>
+                                        <input type="text" id="quantity" required="required">
+                                        <span>Quantity</span>
                                     </div>
                                 </div>
                                 <!-- input time -->
                                 <div class="col-12 col-md-6">
                                     <div class="form-input">
-                                        <label for="mtime">Medicine Time</label>
-                                        <input type="text" id="mtime" required="required">
-                                        <span>Enter Medicine Time</span>
+                                        <label for="time_to_drink">Medicine Time</label>
+                                        <input type="text" id="time_to_drink" required="required">
+                                        <span>Time To Drink</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- row 3 -->
                             <div class="row">
                                 <!-- input note -->
                                 <div class="col-12">
@@ -226,8 +223,6 @@
                                             information</label>
                                     </div>
                                 </div>
-                                <!-- row 4 -->
-                                <!-- btn -->
                                 <div class="group__btn">
                                     <button class="form__butn" id="btn__reset" onclick="btn_reset_active()"
                                         type="reset">Reset</button>
@@ -244,131 +239,7 @@
         <!-- end content -->
 
         <!-- Footer -->
-        <div id="footer">
-            <div class="footer-section">
-                <section class="section">
-                    <div class="container">
-                        <div class="row g-4 justify-content-xl-between">
-                            <div class="col-md-6 col-lg-3 col-xl-4 animated animatedFadeInUp fadeInUp">
-                                <h4 class="info-section__title">Contact Info</h4>
-                                <ul class="info-section__list info-section__list">
-                                    <li class="info-section__list-item">
-                                        <p><i class="text-green fas fa-map-marker-alt"></i> 54 Le Thanh Nghi Street, Ha
-                                            Noi, Viet Nam</p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            <i class="text-green far fa-envelope"></i>
-                                            hoanganh.doan0804@gmail.com
-                                        </p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            <i class="text-green fas fa-mobile-alt"></i>
-                                            +84-234-56789000
-                                        </p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            <i class="text-green fas fa-phone"></i>
-                                            +84-234-56789000
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3 col-xl-2 animated animatedFadeInUp fadeInUp">
-                                <h4 class="info-section__title">More</h4>
-                                <ul class="info-section__list info-section__list">
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            About Us
-                                        </p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            FAQ
-                                        </p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            Membership
-                                        </p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>
-                                            Blog
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3 col-xl-2 animated animatedFadeInUp fadeInUp">
-                                <h4 class="info-section__title">Link</h4>
-                                <ul class="info-section__list info-section__list">
-                                    <li class="info-section__list-item">
-                                        <p>Form</p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>Feedback</p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>View</p>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <p>Authority</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-6 col-lg-3 col-xl-4 animated animatedFadeInUp fadeInUp">
-                                <h4 class="info-section__title">Time Open</h4>
-                                <ul class="info-section__list info-section__list-underline">
-                                    <li class="info-section__list-item">
-                                        <span class="d-inline-block  info-section__list-time">
-                                            <i class="far fa-clock text-green"></i>&emsp;10:00 AM</span>
-                                        <span class="d-inline-block  info-section__list-action">Active</span>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <span class="d-inline-block  info-section__list-time">
-                                            <i class="far fa-clock text-green"></i>&emsp;03:45 PM</span>
-                                        <span class="d-inline-block  info-section__list-action">Active</span>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <span class="d-inline-block  info-section__list-time">
-                                            <i class="far fa-clock text-green"></i>&emsp;04.20 PM</span>
-                                        <span class="d-inline-block  info-section__list-action">Active</span>
-                                    </li>
-
-                                    <li class="info-section__list-item">
-                                        <span class="d-inline-block  info-section__list-time">
-                                            <i class="far fa-clock text-green"></i>&emsp;05.00 PM</span>
-                                        <span class="d-inline-block  info-section__list-action">Close</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="footer__copyright">
-                    <p class="copyright mb-0 sm-text text-white text-center">
-                        Copyright © 2022. All Rights Reserved By <span class="text-green">BTK Team</span>
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div id="footer"></div>
         <!-- End footer -->
     </main>
 

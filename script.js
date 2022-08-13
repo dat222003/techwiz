@@ -43,8 +43,8 @@ async function CheckIfUserExist() {
   for (let i = 0; i < user.length; i++) {
     var element = user[i];
     const keys = Object.keys(element),
-          values = Object.values(element),
-          numOfKeys = Object.keys(keys).length;
+      values = Object.values(element),
+      numOfKeys = Object.keys(keys).length;
     if (Object.values(element).indexOf(user_input) > -1) {
       for (let j = 0; j < numOfKeys; j++) {
         setCookie(keys[j], values[j], 1); //expire in 1 day
@@ -67,8 +67,8 @@ async function loadDosage(name) {
   for (let i = 0; i < dosage.length; i++) {
     var element = dosage[i];
     const keys = Object.keys(element),
-          values = Object.values(element),
-          numOfKeys = Object.keys(keys).length;
+      values = Object.values(element),
+      numOfKeys = Object.keys(keys).length;
     if (Object.values(element).indexOf(name) > -1) {
       for (let j = 0; j < numOfKeys; j++) {
         setCookie(keys[j], values[j], 1); //expire in 1 day
@@ -83,8 +83,9 @@ async function loadAppoint(name) {
   for (let i = 0; i < appoint.length; i++) {
     var element = appoint[i];
     const keys = Object.keys(element),
-          values = Object.values(element),
-          numOfKeys = Object.keys(keys).length;
+      values = Object.values(element),
+      numOfKeys = Object.keys(keys).length;
+
     if (Object.values(element).indexOf(name) > -1) {
       for (let j = 0; j < numOfKeys; j++) {
         setCookie(keys[j], values[j], 1); //expire in 1 day
@@ -103,12 +104,14 @@ closeBtn.onclick = function () {
 function setUserData() {
 
   //load to navbar
-    document.getElementById("username").innerText = "Welcome  " + getCookie("name");
-    document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
+  document.getElementById("username").innerText = "Welcome  " + getCookie("name");
+  document.getElementById("username_resp").innerText = "Welcome  " + getCookie("name");
 
   // set data to form
+
+  //vital health form
   if (document.getElementById("userDataformVitalHealth") != null) {
-    document.getElementById("name").value = getCookie("name"); 
+    document.getElementById("name").value = getCookie("name");
     document.getElementById("height").value = getCookie("height");
     document.getElementById("weight").value = getCookie("weight");
     document.getElementById("bloodtype").value = getCookie("bloodtype");
@@ -116,14 +119,22 @@ function setUserData() {
     document.getElementById("bloodsugar").value = getCookie("bloodsugar");
     document.getElementById("bloodpressure").value = getCookie("bloodpressure");
   }
-
+  //Appointment
   if (document.getElementById("userDataformAppointment") != null) {
-    document.getElementById("name").value = getCookie("full_name"); 
-    document.getElementById("email").value = getCookie("email"); 
-    document.getElementById("date").value = getCookie("date"); 
-    document.getElementById("time").value = getCookie("time"); 
-    document.getElementById("address").value = getCookie("address"); 
-    document.getElementById("mobile").value = getCookie("mobile"); 
+    document.getElementById("name").value = getCookie("full_name");
+    document.getElementById("email").value = getCookie("email");
+    document.getElementById("date").value = getCookie("date");
+    document.getElementById("time").value = getCookie("time");
+    document.getElementById("address").value = getCookie("address");
+    document.getElementById("mobile").value = getCookie("mobile");
+  }
+
+  //dosage
+  if (document.getElementById("DosageForm") != null) {
+    document.getElementById("medicine_name").value = getCookie("medicine_name");
+    document.getElementById("quantity").value = getCookie("quantity");
+    document.getElementById("time_to_drink").value = getCookie("time_to_drink");
+    document.getElementById("note").value = getCookie("note");
   }
 
   // set data to view
@@ -143,7 +154,7 @@ function setUserData() {
     document.getElementById("time_to_drink").innerHTML = getCookie("time_to_drink");
     document.getElementById("note").innerHTML = getCookie("note");
     //appoint
-    document.getElementById("full_name").innerHTML = getCookie("full_name");
+    document.getElementById("full_name").innerHTML = getCookie("name");
     document.getElementById("email").innerHTML = getCookie("email");
     document.getElementById("date").innerHTML = getCookie("date");
     document.getElementById("time").innerHTML = getCookie("time");
@@ -157,6 +168,13 @@ function setUserData() {
 }
 
 window.onload = async function () {
+
+  const footer = document.querySelector("#footer");
+  await fetch("footer.html")
+    .then(resp => resp.text())
+    .then(data => {
+      footer.innerHTML = data
+    })
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
     setUserData();

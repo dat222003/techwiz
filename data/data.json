@@ -29,14 +29,14 @@
       "dosage" : 
       [{
         "name" : "hieu",
-        "medicine_name" : "medicine_hieu",
+        "medicine_name" : "medicine_B",
         "dose" : "27",
         "quantity" : "170",
         "time_to_drink" : "before lunch", 
         "note" : "this is a note"
       },{
         "name" : "dat",
-        "medicine_name" : "medicine_dat",
+        "medicine_name" : "medicine_C",
         "dose" : "27",
         "quantity" : "170",
         "time_to_drink" : "before lunch",
@@ -44,7 +44,7 @@
 
       },{
         "name" : "ngoc",
-        "medicine_name" : "medicine_ngoc",
+        "medicine_name" : "medicine_A",
         "dose" : "27",
         "quantity" : "170",
         "time_to_drink" : "before lunch",
