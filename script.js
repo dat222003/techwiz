@@ -147,7 +147,20 @@ function setUserData() {
 
 }
 
-window.onload = function () {
+window.onload = async function () {
+  // const header = document.querySelector("#header");
+  // await fetch("header.html")
+  //   .then(resp => resp.text())
+  //   .then(data => {
+  //     header.innerHTML = data
+  //   })
+
+  // const footer = document.querySelector("#footer");
+  // await fetch("footer.html")
+  //   .then(resp => resp.text())
+  //   .then(data => {
+  //     footer.innerHTML = data
+  //   })
   if (document.cookie != "") {
     document.querySelector(".get-username").style.display = "none";
     setUserData();
